@@ -1,0 +1,36 @@
+svg.widget-svg{
+    width: 25px !important;
+}
+li.text-muted.text-right{
+    float: right;
+    margin: auto 0;
+}
+.row.col-md-6{
+    margin: 0 auto;
+}
+.input-type{
+    padding: 4px 0;
+}
+.form-group{
+    margin: 0 0 0 8px;
+    color: #59ab6e;
+}
+.nav-item{
+    margin: 0 2px;
+}
+.nav-item .nav-link{
+    font-size: 24px !important;
+}
+.av-max{
+    max-width: 100% !important;
+}
+/*  */
+.nav-heading{
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.nav-sub{
+    float: right;
+}
+/*  */
