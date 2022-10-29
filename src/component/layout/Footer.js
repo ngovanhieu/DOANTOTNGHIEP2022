@@ -39,11 +39,11 @@ function Footer() {
                         <div className="col-md-4 pt-5">
                             <h2 className="h2 text-light border-bottom pb-3 border-light">Chi tiết thông tin</h2>
                             <ul className="list-unstyled text-light footer-link-list">
-                                <li><a className="text-decoration-none" href="google.com">Home</a></li>
-                                <li><a className="text-decoration-none" href="google.com">About Us</a></li>
-                                <li><a className="text-decoration-none" href="google.com">Shop Locations</a></li>
+                                <li><a className="text-decoration-none" href="http://localhost:3000/Home">Home</a></li>
+                                <li><a className="text-decoration-none" href="http://localhost:3000/About">About Us</a></li>
+                                <li><a className="text-decoration-none" href="http://localhost:3000/Shop">Shop Locations</a></li>
                                 {/* <li><a className="text-decoration-none" href="google.com">FAQs</a></li> */}
-                                <li><a className="text-decoration-none" href="google.com">Contact</a></li>
+                                <li><a className="text-decoration-none" href="http://localhost:3000/Contact">Contact</a></li>
                             </ul>
                         </div>
 

@@ -22,16 +22,18 @@ function Home() {
                                 </div>
                                 <div className="col-lg-6 mb-0 d-flex align-items-center">
                                     <div className="text-align-left align-self-center">
-                                        <h1 className="h1 text-success"><b>Zay</b> eCommerce</h1>
-                                        <h3 className="h2">Tiny and Perfect eCommerce Template</h3>
+                                        <h1 className="h1 text-success"><b>Alo...</b> Phone</h1>
+                                        <h3 className="h2">Lấy khoa học và công nghệ làm động lực và phát triển bằng chất lượng</h3>
                                         <p>
-                                            Zay Shop is an eCommerce HTML5 CSS template with latest version of Bootstrap 5 (beta 1).
-                                            This template is 100% free provided by
-                                            <a rel="sponsored" className="text-success" href="https://templatemo.com">TemplateMo</a> website.
-                                            Image credits go to
-                                            <a rel="sponsored" className="text-success" href="https://stories.freepik.com/">Freepik Stories</a>,
-                                            <a rel="sponsored" className="text-success" href="https://unsplash.com/">Unsplash</a> and
-                                            <a rel="sponsored" className="text-success" href="https://icons8.com/">Icons 8</a>.
+                                        Chúng tôi cam kết mang đến những sản phẩm chính hãng chất lượng, giá cả hợp lý và chính sách hậu mãi tuyệt vời nhất.
+                                         Cùng với đó là đội ngũ nhân viên trẻ, 
+                                        chuyên môn cao, hỗ trợ tận tâm, chắc chắn sẽ mang đến cho các bạn trải nghiệm mua hàng có 1-0-2 Tại:
+                                            <a rel="sponsored" className="text-success" href="https://templatemo.com"> AloPhone </a> website.
+                                            <br/>
+                                            Alo Phone hiện đang là đối tác của các thương hiệu Digital & Audio hàng đầu thế giới như
+                                            <a rel="sponsored" className="text-success" href="https://stories.freepik.com/"> Apple </a>,
+                                            <a rel="sponsored" className="text-success" href="https://unsplash.com/"> Samsung </a> and
+                                            <a rel="sponsored" className="text-success" href="https://icons8.com/"> Oppo</a>.
                                         </p>
                                     </div>
                                 </div>
@@ -46,11 +48,11 @@ function Home() {
                                 </div>
                                 <div className="col-lg-6 mb-0 d-flex align-items-center">
                                     <div className="text-align-left">
-                                        <h1 className="h1">Proident occaecat</h1>
-                                        <h3 className="h2">Aliquip ex ea commodo consequat</h3>
+                                        <h1 className="h1">OPPO Reno8 Z 5G</h1>
+                                        <h3 className="h2">Ấn tượng với diện mạo thời trang và màn hình chất lượng</h3>
                                         <p>
-                                            You are permitted to use this Zay CSS template for your commercial websites.
-                                            You are <strong>not permitted</strong> to re-distribute the template ZIP file in any kind of template collection websites.
+                                             đã được giới thiệu tại thị trường Việt Nam vào tháng 8/2022.
+                                             Cảm nhận đầu tiên của mình khi trên tay chiếc<strong > OPPO Reno8 Z 5G </strong>  là máy có thiết kế rất đẹp, từ màu sắc cho đến cách tạo hình đều làm mình hài lòng.
                                         </p>
                                     </div>
                                 </div>
@@ -65,11 +67,12 @@ function Home() {
                                 </div>
                                 <div className="col-lg-6 mb-0 d-flex align-items-center">
                                     <div className="text-align-left">
-                                        <h1 className="h1">Repr in voluptate</h1>
-                                        <h3 className="h2">Ullamco laboris nisi ut </h3>
+                                        <h1 className="h1">Galaxy S22 Ultra 5G</h1>
+                                        <h3 className="h2">chiếc smartphone cao cấp nhất trong bộ 3 Galaxy S22 series</h3>
                                         <p>
-                                            We bring you 100% free CSS templates for your websites.
-                                            If you wish to support TemplateMo, please make a small contribution via PayPal or tell your friends about our website. Thank you.
+                                        Sở hữu một diện mạo đầy nổi bật.
+                                        Galaxy S22 Ultra 5G được kế thừa form thiết kế từ những dòng Note trước đây của hãng đem đến cho bạn có cảm giác vừa mới lạ vừa hoài niệm. 
+                                        Trọng lượng của máy 228 g cho cảm giác cầm nắm đầm tay, khi cầm máy trần thì hơi có cảm giác dễ trượt.
                                         </p>
                                     </div>
                                 </div>
@@ -89,32 +92,32 @@ function Home() {
                     <div className="col-lg-6 m-auto">
                         <h1 className="h1">Categories of The Month</h1>
                         <p>
-                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                            deserunt mollit anim id est laborum.
+                        Thị trường là tiêu chuẩn duy nhất để kiểm tra chất lượng
                         </p>
                     </div>
                 </div>
                 <div className="row">
                     <div className="col-12 col-md-4 p-5 mt-3">
                         <a href="google.com">
-                            <img alt="img" style={{ maxWidth: "100%", borderRadius: "50%", backgroundColor: "#ccc" }} src="https://cdn.tgdd.vn/Products/Images/7264/199553/edifice-casio-ef-539d-1avudf-bac-1-2-org.jpg" />
+                            <img alt="img" style={{ maxWidth: "100%", borderRadius: "50%", backgroundColor: "#ccc" }} src="https://image.anhducdigital.vn/apple/iphone/iphone-14-pro-pro-max/iphone-14-pro-max/iphone-14-pro-max-10-500x500.jpg" />
                         </a>
-                        <h5 className="text-center mt-3 mb-3">Watches</h5>
+                        <h5 className="text-center mt-3 mb-3">iPhone 14 Pro Max </h5>
                         <p className="text-center">
-                            <a href="google.com" className="btn btn-success">Go Shop</a>
+                            <a href="http://localhost:3000/Shop" className="btn btn-success">Go Shop</a>
                         </p>
                     </div>
                     <div className="col-12 col-md-4 p-5 mt-3">
                         <a href="google.com">
-                            <img alt="img" style={{ maxWidth: "100%", borderRadius: "50%", backgroundColor: "#ccc" }} src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/229e884b9d1f41f082d9ab6f0123689a_9366/Giay_bong_dja_Predator_Mutator_20.3_Turf_trang_FW9220_01_standard.jpg" className="rounded-circle img-fluid border" /></a>
-                        <h2 className="h5 text-center mt-3 mb-3">Shoes</h2>
-                        <p className="text-center"><a href="google.com" className="btn btn-success">Go Shop</a></p>
+                            <img alt="img" style={{ maxWidth: "100%", borderRadius: "50%", backgroundColor: "#ccc" }} src="https://image.anhducdigital.vn/di-dong/dien-thoai/samsung/samsung-galaxy-z/samsung-galaxy-z-flip4/samsung-galaxy-z-flip4-11-500x500.jpg" className="rounded-circle img-fluid border" /></a>
+                        <h2 className="h5 text-center mt-3 mb-3">Galaxy Z Flip4</h2>
+                        <p className="text-center"><a href="http://localhost:3000/Shop" className="btn btn-success">Go Shop</a></p>
+                        
                     </div>
                     <div className="col-12 col-md-4 p-5 mt-3">
                         <a href="google.com">
-                            <img alt="img" style={{ maxWidth: "100%", borderRadius: "50%", backgroundColor: "#ccc" }} src="https://cf.shopee.vn/file/e6592797553ee7d8fbf8ab1470ecc482" className="rounded-circle img-fluid border" /></a>
-                        <h2 className="h5 text-center mt-3 mb-3">Accessories</h2>
-                        <p className="text-center"><a href="google.com" className="btn btn-success">Go Shop</a></p>
+                            <img alt="img" style={{ maxWidth: "100%", borderRadius: "50%", backgroundColor: "#ccc" }} src="https://image.anhducdigital.vn/apple/iphone/iphone-14/iphone-14-31-500x500.jpg" className="rounded-circle img-fluid border" /></a>
+                        <h2 className="h5 text-center mt-3 mb-3">iPhone 14 | 512GB | Purple</h2>
+                        <p className="text-center"><a href="http://localhost:3000/Shop" className="btn btn-success">Go Shop</a></p>
                     </div>
                 </div>
             </section>
@@ -124,8 +127,7 @@ function Home() {
                         <div className="col-lg-6 m-auto">
                             <h1 className="h1">Featured Product</h1>
                             <p>
-                                Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                                Excepteur sint occaecat cupidatat non proident.
+                            Người tốt tạo ra chất lượng tốt, và chất lượng tốt tạo ra sản phẩm tốt.
                             </p>
                         </div>
                     </div>
@@ -133,7 +135,7 @@ function Home() {
                         <div className="col-12 col-md-4 mb-4">
                             <div className="card h-100">
                                 <a href="0">
-                                    <img src="https://www.micromark.com/Web%20Store%20Images/90673_R-01.jpg" className="card-img-top" alt="..." />
+                                    <img src="https://image.anhducdigital.vn/apple/iphone/iphone-13/iphone-13-02-500x500.jpg" className="card-img-top" alt="..." />
                                 </a>
                                 <div className="card-body">
                                     <ul className="list-unstyled d-flex justify-content-between">
@@ -149,11 +151,12 @@ function Home() {
                                             </StarRatings>
 
                                         </li>
-                                        <li className="text-muted text-right">$240.00</li>
+                                        <li className="text-muted text-right">18.990.000 vnđ</li>
                                     </ul>
-                                    <a href="shop-single.html" className="h2 text-decoration-none text-dark">Gym Weight</a>
+                                    <a href="shop-single.html" className="h2 text-decoration-none text-dark">iPhone 13 | 128GB | Pink</a>
                                     <p className="card-text">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt in culpa qui officia deserunt.
+                                    Apple vừa chính thức giới thiệu đến người dùng dòng iPhone 13 mới với hàng loạt tính năng được cải thiện, bổ sung. 
+                                    Tốc độ mạng 5G siêu tốc, chip xử lý A15 Bionic mạnh mẽ, cụm camera được cải tiến, tất cả đều có mặt trên iPhone 13 năm nay.
                                     </p>
                                     <p className="text-muted">Reviews (24)</p>
                                 </div>
@@ -162,7 +165,7 @@ function Home() {
                         <div className="col-12 col-md-4 mb-4">
                             <div className="card h-100">
                                 <a href="0">
-                                    <img src="https://cf.shopee.com.my/file/906f68a4d04b3cf712af440446ffcd2e" className="card-img-top" alt="..." />
+                                    <img src="https://image.anhducdigital.vn/di-dong/dien-thoai/samsung/samsung-galaxy-z-fold4/samsung-galaxy-z-fold4-03-500x500.jpg" className="card-img-top" alt="..." />
                                 </a>
                                 <div className="card-body">
                                     <ul className="list-unstyled d-flex justify-content-between">
@@ -177,11 +180,12 @@ function Home() {
                                             >
                                             </StarRatings>
                                         </li>
-                                        <li className="text-muted text-right">$480.00</li>
+                                        <li className="text-muted text-right">49.990.000 vnđ</li>
                                     </ul>
-                                    <a href="shop-single.html" className="h2 text-decoration-none text-dark">Cloud Nike Shoes</a>
+                                    <a href="shop-single.html" className="h2 text-decoration-none text-dark">Samsung Galaxy Z Fold4</a>
                                     <p className="card-text">
-                                        Aenean gravida dignissim finibus. Nullam ipsum diam, posuere vitae pharetra sed, commodo ullamcorper.
+                                    Samsung Galaxy Z Fold4 vẫn sở hữu màn hình ngoài có kích thước 6.2 inch cùng thiết kế Infinity-O tràn viền, sử dụng tấm nền Dynamic AMOLED 2X, độ phân giải HD+ (2316x904 pixel) và có tần số quét linh hoạt 48-120Hz, cho trải nghiệm chạm vuốt mượt mà hơn tùy theo nội dung hiển thị. 
+                                    Ngoài ra, do có sự thay đổi về kích thước máy nên tỷ lệ màn hình cũng thay đổi thành 23.1:9.
                                     </p>
                                     <p className="text-muted">Reviews (48)</p>
                                 </div>
@@ -190,7 +194,7 @@ function Home() {
                         <div className="col-12 col-md-4 mb-4">
                             <div className="card h-100">
                                 <a href="0">
-                                    <img src="https://media.composition.gallery/glossary/What-is-polaroid-composition1542528544.png" className="card-img-top" alt="..." />
+                                    <img src="https://image.anhducdigital.vn/di-dong/may-tinh/microsoft-surface/surface-duo-2/surface-duo-2-4-500x500.jpg" className="card-img-top" alt="..." />
                                 </a>
                                 <div className="card-body">
                                     <ul className="list-unstyled d-flex justify-content-between">
@@ -205,11 +209,14 @@ function Home() {
                                             >
                                             </StarRatings>
                                         </li>
-                                        <li className="text-muted text-right">$360.00</li>
+                                        <li className="text-muted text-right">36.000.000 vnđ</li>
                                     </ul>
-                                    <a href="shop-single.html" className="h2 text-decoration-none text-dark">Summer Addides Shoes</a>
+                                    <a href="shop-single.html" className="h2 text-decoration-none text-dark">Surface Duo 2</a>
                                     <p className="card-text">
-                                        Curabitur ac mi sit amet diam luctus porta. Phasellus pulvinar sagittis diam, et scelerisque ipsum lobortis nec.
+                                    Surface Duo 2 không có quá nhiều sự thay đổi về thiết kế so với bản tiền nhiệm Surface Duo.
+                                     Máy vẫn được trang bị một bản lề để kết nối hai màn hình, cho phép mở ra và gập lại 360 độ.
+                                     <br/>
+                                     Microsoft đã thiết kế một đường cong nhẹ ở phần bản lề để lúc gập thiết bị người dùng vẫn có thể xem nhanh ngày giờ và các thông báo bị bỏ lỡ.
                                     </p>
                                     <p className="text-muted">Reviews (74)</p>
                                 </div>
