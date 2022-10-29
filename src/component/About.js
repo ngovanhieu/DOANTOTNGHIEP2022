@@ -73,71 +73,27 @@ function About() {
                         </div>
                         <div className="col-lg-9 m-auto tempaltemo-carousel">
                             <div className="row d-flex flex-row">
-                                <div className="col-1 align-self-center">
-                                    <a className="h1" href="#templatemo-slide-brand" role="button" data-bs-slide="prev">
-                                        <i className="text-light fas fa-chevron-left"></i>
-                                    </a>
-                                </div>
                                 <div className="col">
                                     <div className="carousel slide carousel-multi-item pt-2 pt-md-0" id="templatemo-slide-brand" data-bs-ride="carousel">
                                         <div className="carousel-inner product-links-wap" role="listbox">
-
-                                            <div className="carousel-item">
-                                                <div className="row">
-                                                    <div className="col-3 p-md-5">
-                                                        <a href="google.com"><img className="img-fluid brand-img" src="./fe/assets/img/brand_01.png" alt="img" /></a>
-                                                    </div>
-                                                    <div className="col-3 p-md-5">
-                                                        <a href="google.com"><img className="img-fluid brand-img" src="./fe/assets/img/brand_02.png" alt="img" /></a>
-                                                    </div>
-                                                    <div className="col-3 p-md-5">
-                                                        <a href="google.com"><img className="img-fluid brand-img" src="./fe/assets/img/brand_03.png" alt="img" /></a>
-                                                    </div>
-                                                    <div className="col-3 p-md-5">
-                                                        <a href="google.com"><img className="img-fluid brand-img" src="./fe/assets/img/brand_04.png" alt="img" /></a>
-                                                    </div>
-                                                </div>
-                                            </div>
                                             <div className="carousel-item active">
                                                 <div className="row">
                                                     <div className="col-3 p-md-5">
-                                                        <a href="google.com"><img className="img-fluid brand-img" src="./fe/assets/img/brand_01.png" alt="img" /></a>
+                                                        <a href="google.com"><img className="img-fluid brand-img" src="./apple.png" alt="img" /></a>
                                                     </div>
                                                     <div className="col-3 p-md-5">
-                                                        <a href="google.com"><img className="img-fluid brand-img" src="./fe/assets/img/brand_02.png" alt="img" /></a>
+                                                        <a href="google.com"><img className="img-fluid brand-img" src="./samsung.png" alt="img" /></a>
                                                     </div>
                                                     <div className="col-3 p-md-5">
-                                                        <a href="google.com"><img className="img-fluid brand-img" src="./fe/assets/img/brand_03.png" alt="img" /></a>
+                                                        <a href="google.com"><img className="img-fluid brand-img" src="./microsoft.png" alt="img" /></a>
                                                     </div>
                                                     <div className="col-3 p-md-5">
-                                                        <a href="google.com"><img className="img-fluid brand-img" src="./fe/assets/img/brand_04.png" alt="img" /></a>
+                                                        <a href="google.com"><img className="img-fluid brand-img" src="./oppo.png" alt="img" /></a>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className="carousel-item">
-                                                <div className="row">
-                                                    <div className="col-3 p-md-5">
-                                                        <a href="google.com"><img className="img-fluid brand-img" src="./fe/assets/img/brand_01.png" alt="img" /></a>
-                                                    </div>
-                                                    <div className="col-3 p-md-5">
-                                                        <a href="google.com"><img className="img-fluid brand-img" src="./fe/assets/img/brand_02.png" alt="img" /></a>
-                                                    </div>
-                                                    <div className="col-3 p-md-5">
-                                                        <a href="google.com"><img className="img-fluid brand-img" src="./fe/assets/img/brand_03.png" alt="img" /></a>
-                                                    </div>
-                                                    <div className="col-3 p-md-5">
-                                                        <a href="google.com"><img className="img-fluid brand-img" src="./fe/assets/img/brand_04.png" alt="img" /></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
                                         </div>
                                     </div>
-                                </div>
-                                <div className="col-1 align-self-center">
-                                    <a className="h1" href="#templatemo-slide-brand" role="button" data-bs-slide="next">
-                                        <i className="text-light fas fa-chevron-right"></i>
-                                    </a>
                                 </div>
                             </div>
                         </div>

@@ -1,6 +1,33 @@
 import { Link } from "react-router-dom";
 
 function Header() {
+
+    let x = 1
+
+    function renderLogin() {
+        if (x == 1) {
+            return (
+                <>
+                    <Link to={"/Login"} className="nav-icon position-relative text-decoration-none">
+                        <i className="fas fa-user-check text-dark mr-3"> Login</i>
+                    </Link>
+                </>
+            )
+        } else {
+            return (
+                <>
+                    <a className="nav-icon position-relative text-decoration-none" href="google.com">
+                        <i className="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
+                        <span className="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">7</span>
+                    </a>
+                    <a className="nav-icon position-relative text-decoration-none" href="google.com" style={{ color: "red" }}>
+                        <i className="fas fa-user-check text-dark mr-3" style={{ color: "red" }}></i> Logout
+                    </a>
+                </>
+            )
+        }
+    }
+
     return (
         <>
             <nav className="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
@@ -65,14 +92,7 @@ function Header() {
                             <a className="nav-icon d-none d-lg-inline" href="google.com" data-bs-toggle="modal" data-bs-target="#templatemo_search">
                                 <i className="fa fa-fw fa-search text-dark mr-2"></i>
                             </a>
-                            <a className="nav-icon position-relative text-decoration-none" href="google.com">
-                                <i className="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
-                                <span className="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">7</span>
-                            </a>
-                            <a className="nav-icon position-relative text-decoration-none" href="google.com">
-                                <i className="fa fa-fw fa-user text-dark mr-3"></i>
-                                <span className="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">+99</span>
-                            </a>
+                            {renderLogin()}
                         </div>
                     </div>
 
