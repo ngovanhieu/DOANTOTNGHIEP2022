@@ -31,11 +31,11 @@ function Contact() {
                                 <input type="email" className="form-control mt-1" id="email" name="email" placeholder="Email" />
                             </div>
                         </div>
-                        <div className="mb-3">
+                        <div className="mb-3 form-group">
                             <label for="inputsubject">Subject</label>
                             <input type="text" className="form-control mt-1" id="subject" name="subject" placeholder="Subject" />
                         </div>
-                        <div className="mb-3">
+                        <div className="mb-3 form-group">
                             <label for="inputmessage">Message</label>
                             <textarea className="form-control mt-1" id="message" name="message" placeholder="Message" rows="8"></textarea>
                         </div>

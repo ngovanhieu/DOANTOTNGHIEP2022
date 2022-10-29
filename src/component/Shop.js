@@ -1,25 +1,35 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import axios from "axios";
 
 export const Shop = () => {
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    fetchData();
-  }, []);
+  // const [data, setData] = useState([]);
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
 
-  const fetchData = async () => {
-    axios.get('http://localhost:5000/phone')
-  .then(function (response) {
-    // handle success
-    setData(response.data)
-    console.log(response);
-  })
-  .catch(function (error) {
-    // handle error
-    console.log(error);
-  })
-    
-  };
+  // const fetchData = async () => {
+  //   axios.get('http://localhost:5000/phone')
+  //     .then(function (response) {
+  //       // handle success
+  //       setData(response.data)
+  //       console.log(response);
+  //     })
+  //     .catch(function (error) {
+  //       // handle error
+  //       console.log(error);
+  //     })
+
+  // };
+
+  useEffect(() => {
+    axios.get("http://localhost:3000/Shop")
+      .then((res) => {
+        console.log(res)
+      })
+      .catch(error => console.log(error))
+  }, [])
+
+
   return (
     <>
       <div className="container py-5">
@@ -150,11 +160,11 @@ export const Shop = () => {
               </div>
             </div>
             <div className="row">
-              {data.map((item, index) => (
+              {/* {data.map((item, index) => (
                 <div className="col-md-4" key={index}>
                   <div className="card mb-4 product-wap rounded-0">
                     <div className="card rounded-0">
-                      <img className="card-img rounded-0 img-fluid" alt="img" src={item?.images}/>
+                      <img className="card-img rounded-0 img-fluid" alt="img" src={item?.images} />
                       <div className="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                         <ul className="list-unstyled">
                           <li>
@@ -214,7 +224,7 @@ export const Shop = () => {
                     </div>
                   </div>
                 </div>
-              ))}
+              ))} */}
             </div>
             <div div="row">
               <ul className="pagination pagination-lg justify-content-end">

@@ -1,9 +1,17 @@
 // import { useState } from "react";
+import axios from "axios";
+import { useEffect } from "react";
 import StarRatings from "react-star-ratings";
 
 function Home() {
     // const rate = 3.7
-
+    useEffect(() => {
+        axios.get("http://localhost:3000/Home")
+            .then((res) => {
+                console.log(res);
+            })
+            .catch(error => console.log(error))
+    }, [])
 
     return (
         <>
@@ -141,7 +149,7 @@ function Home() {
                                             <StarRatings
                                                 className="start-rating"
                                                 rating={3.5}
-                                                starRatedColor="red"
+                                                starRatedColor="#59ab6e"
                                                 // changeRating={changeRating}
                                                 numberOfStars={5}
                                                 name="rate"
@@ -170,7 +178,7 @@ function Home() {
                                             <StarRatings
                                                 className="start-rating"
                                                 rating={4.6}
-                                                starRatedColor="red"
+                                                starRatedColor="#59ab6e"
                                                 // changeRating={changeRating}
                                                 numberOfStars={5}
                                                 name="rate"
@@ -198,7 +206,7 @@ function Home() {
                                             <StarRatings
                                                 className="start-rating"
                                                 rating={2.4}
-                                                starRatedColor="red"
+                                                starRatedColor="#59ab6e"
                                                 // changeRating={changeRating}
                                                 numberOfStars={5}
                                                 name="rate"
