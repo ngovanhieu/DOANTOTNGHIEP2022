@@ -5,6 +5,7 @@ li.text-muted.text-right{
     float: right;
     margin: auto 0;
 }
+
 .row.col-md-6{
     margin: 0 auto;
 }
@@ -32,5 +33,25 @@ li.text-muted.text-right{
 }
 .nav-sub{
     float: right;
+}
+.cardShop{
+}
+.card-imgage
+{
+    width: 90%;
+    height: 230px;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center ;
+}
+.collapsed{
+    cursor: pointer;
+}
+.collapsed:hover {
+    background-color: rgb(227, 227, 227);
+}
+.list-inline-item{
+    cursor: pointer;
 }
 /*  */
