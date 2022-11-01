@@ -10,20 +10,21 @@ import Contact from './component/Contact';
 import Register from './component/member/Register';
 import { Detail } from './component/Detail';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Login from './component/member/Login';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Router>
     <App>
       <Routes>
-        <Route index path='/' element={<Home  />} />
+        <Route index path='/' element={<Home />} />
         <Route path='/home' element={<Home />} />
         <Route path='/shop' element={<Shop />} />
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/register' element={<Register />} />
-        <Route path='/login' element={<Register />} />  
-        <Route path='/detail/:id' element={<Detail />} />  
+        <Route path='/login' element={<Login />} />
+        <Route path='/detail/:id' element={<Detail />} />
       </Routes>
     </App>
   </Router>

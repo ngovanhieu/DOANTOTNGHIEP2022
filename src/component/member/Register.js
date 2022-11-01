@@ -14,7 +14,6 @@ function Register() {
                                 <input type="email" class="form-control mt-1" id="email" name="email" placeholder="Email" />
                             </div>
                         </div>
-
                     </form>
                 </div>
             </div>
