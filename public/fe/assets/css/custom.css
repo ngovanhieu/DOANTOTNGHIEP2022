@@ -1,7 +1,8 @@
-svg.widget-svg{
+svg.widget-svg {
     width: 25px !important;
 }
-li.text-muted.text-right{
+
+li.text-muted.text-right {
     float: right;
     margin: auto 0;
 }
@@ -9,30 +10,97 @@ li.text-muted.text-right{
 .row.col-md-6{
     margin: 0 auto;
 }
-.input-type{
+
+.input-type {
     padding: 4px 0;
 }
-.form-group{
+
+.form-group {
     margin: 0 0 0 8px;
     color: #59ab6e;
+    padding: 0 1px;
 }
-.nav-item{
+
+.nav-item {
     margin: 0 2px;
 }
-.nav-item .nav-link{
+
+.nav-item .nav-link {
     font-size: 24px !important;
 }
-.av-max{
+
+.av-max {
     max-width: 100% !important;
 }
+
 /*  */
-.nav-heading{
+.nav-heading {
     max-width: 100%;
     display: flex;
     justify-content: space-between;
 }
-.nav-sub{
+
+.nav-sub {
     float: right;
+}
+
+/*  */
+
+.css-form{
+    margin: 0 auto !important;
+}
+.img-login{
+    /* background-color: #ccc ; */
+    margin: 0 auto;
+}
+.btn-other{
+    border: #000 solid 1.5px;
+    background-color: #d9ffed;
+}
+/*  */
+.background-radial-gradient {
+    background-color: hsl(218, 41%, 15%);
+    background-image: radial-gradient(650px circle at 0% 0%,
+            hsl(218, 41%, 35%) 15%,
+            hsl(218, 41%, 30%) 35%,
+            hsl(218, 41%, 20%) 75%,
+            hsl(218, 41%, 19%) 80%,
+            transparent 100%),
+        radial-gradient(1250px circle at 100% 100%,
+            hsl(218, 41%, 45%) 15%,
+            hsl(218, 41%, 30%) 35%,
+            hsl(218, 41%, 20%) 75%,
+            hsl(218, 41%, 19%) 80%,
+            transparent 100%);
+}
+
+#radius-shape-1 {
+    height: 220px;
+    width: 220px;
+    top: -60px;
+    left: -130px;
+    background: radial-gradient(#44006b, #ad1fff);
+    overflow: hidden;
+}
+
+#radius-shape-2 {
+    border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
+    bottom: -60px;
+    right: -110px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(#44006b, #ad1fff);
+    overflow: hidden;
+}
+
+.bg-glass {
+    background-color: hsla(0, 0%, 100%, 0.9) !important;
+    backdrop-filter: saturate(200%) blur(25px);
+}
+
+/*  */
+.img-backgrounf{
+    /* background-image: url("https://preview.colorlib.com/theme/bootstrap/login-form-20/images/xbg.jpg.pagespeed.ic.tiVxeakBSd.webp"); */
 }
 .cardShop{
 }
