@@ -54,4 +54,9 @@ li.text-muted.text-right{
 .list-inline-item{
     cursor: pointer;
 }
+.about-hero{
+    height: 300px;
+    background-size: cover;
+    width: 500px;    
+}
 /*  */
