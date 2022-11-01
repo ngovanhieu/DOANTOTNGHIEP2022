@@ -48,15 +48,6 @@ function Login() {
             navigate('/')
         }
     }
-    function renderErr() {
-        if (Object.keys(itemErr).length > 0) {
-            return Object.keys(itemErr).map((keys, index) => {
-                return (
-                    <p key={index}>{itemErr[keys]}</p>
-                )
-            })
-        }
-    }
 
     return (
         <>
@@ -67,10 +58,12 @@ function Login() {
                             <label for="inputname">Email address</label>
                             <input onChange={hanldeIn} type="email" className="form-control mt-1" name="email" placeholder="Email address" />
                         </div>
+                        <p style={{ color: "#FF3030" }}>{itemErr["email"]}</p>
                         <div className="form-group col-md-12 mb-3">
                             <label for="inputemail">Password</label>
                             <input onChange={hanldeIn} type="Password" className="form-control mt-1" name="pass" placeholder="Password" />
                         </div>
+                        <p style={{ color: "#FF3030" }}>{itemErr["pass"]}</p>
                     </div>
                     <div className="row">
                         <div className=" mt-2">
@@ -87,18 +80,17 @@ function Login() {
                                 <i className="fas fa-user-check" style={{ color: "#59ab6e" }}> Register</i>
                             </Link>
                         </div>
-                        {renderErr()}
                     </div>
                     <div className="row">
                         <div className="col m-auto mt-2">
-                            <button type="submit" className="btn btn-other px-3 col-md-12">
+                            <button className="btn btn-other btn-primary px-3 col-md-12">
                                 Login with google <i className="fa fa-google-plus" style={{ color: "red" }}></i>
                             </button>
                         </div>
                     </div>
                     <div className="row">
                         <div className="col m-auto mt-2">
-                            <button type="submit" className="btn btn-other px-3 col-md-12">
+                            <button className="btn btn-other btn-primary px-3 col-md-12">
                                 Login with facebook <i className="fa fa-google-plus" style={{ color: "red" }}></i>
                             </button>
                         </div>
