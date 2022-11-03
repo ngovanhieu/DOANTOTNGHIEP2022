@@ -36,7 +36,7 @@ export const Shop = () => {
   let items = [];
   for (let number = 1; number <= totalPage; number++) {
     items.push(
-      <Pagination.Item key={number} active={number === page} onClick={()=> setPage(number)}>
+      <Pagination.Item key={number} active={number === page} onClick={() => setPage(number)}>
         {number}
       </Pagination.Item>,
     );
@@ -80,23 +80,23 @@ export const Shop = () => {
                 <ul className="list-inline shop-top-menu pb-3 pt-1">
                   <li className="list-inline-item">
                     <a className="h3 text-dark text-decoration-none mr-3">
-                    ALOPHONE 
+                      ALOPHONE
                     </a>
                   </li>
                   <li className="list-inline-item">
                     <a className="h3 text-dark text-decoration-none mr-3">
-                     |
+                      |
                     </a>
                   </li>
                   <li className="list-inline-item">
                     <a className="h3 text-dark text-decoration-none">Shop</a>
                   </li>
-                  
+
                 </ul>
               </div>
               <div className="col-md-6 pb-4">
                 <div className="d-flex">
-             
+
                   <input type="text" className="form-control" placeholder="Nhập Sản Phẩm Tìm Kiếm" />
 
                 </div>
@@ -149,7 +149,7 @@ export const Shop = () => {
                         href="shop-single.html"
                         className="h3 text-decoration-none"
                       >
-                       {item?.productName}
+                        {item?.productName}
                       </a>
                       <ul className="w-100 list-unstyled d-flex justify-content-between mb-0">
                         <li>hãng: {item?.productBrand}</li>
