@@ -79,10 +79,10 @@ function About() {
                                             <div className="carousel-item active">
                                                 <div className="row">
                                                     <div className="col-3 p-md-5">
-                                                        <a href="google.com"><img className="img-fluid brand-img" src="./samsung.png" alt="img" /></a>
+                                                        <a href="google.com"><img className="img-fluid brand-img" src="./apple.png" alt="img" /></a>
                                                     </div>
                                                     <div className="col-3 p-md-5">
-                                                        <a href="google.com"><img className="img-fluid brand-img"src="./apple.png"  alt="img" /></a>
+                                                        <a href="google.com"><img className="img-fluid brand-img" src="./samsung.png" alt="img" /></a>
                                                     </div>
                                                     <div className="col-3 p-md-5">
                                                         <a href="google.com"><img className="img-fluid brand-img" src="./microsoft.png" alt="img" /></a>

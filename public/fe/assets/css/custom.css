@@ -5,7 +5,6 @@ li.text-muted.text-right{
     float: right;
     margin: auto 0;
 }
-
 .row.col-md-6{
     margin: 0 auto;
 }
@@ -34,6 +33,7 @@ li.text-muted.text-right{
 .nav-sub{
     float: right;
 }
+<<<<<<< HEAD
 .cardShop{
 }
 .card-imgage
@@ -59,4 +59,6 @@ li.text-muted.text-right{
     background-size: cover;
     width: 500px;    
 }
+=======
+>>>>>>> parent of b88d9b1 (Detail & loading)
 /*  */
