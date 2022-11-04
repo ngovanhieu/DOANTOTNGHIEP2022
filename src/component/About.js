@@ -5,16 +5,15 @@ function About() {
                 <div className="container">
                     <div className="row align-items-center py-5">
                         <div className="col-md-8 text-white">
-                            <h1>ALo Shop có gì ? 👀</h1>
+                            <h1>About Us</h1>
                             <p>
-                            luôn hoạt động dựa trên tôn chỉ đặt khách hàng là trung tâm, mọi nỗ lực để đạt được mục tiêu cao nhất là làm hài lòng người dùng thông qua các sản phẩm được cung cấp và dịch vụ khách hàng. Hoàng Hà Mobile đang từng bước xây dựng dịch vụ khách hàng vượt trội, 
-                            xứng đáng là đơn vị bán lẻ hàng đầu tại Việt Nam. Sự tin tưởng và ủng hộ nhiệt tình của quý khách hàng tại chuỗi chi nhánh đã phần nào khẳng định hiệu quả hoạt động của đội ngũ nhân viên Alo Shop.
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                             </p>
                         </div>
                         <div className="col-md-4">
-                            {/* <img className="about hero" src="./fe/assets/img/pngwing.com.png" alt="About Hero" />' */}
-                            <h1 className="col-md-16 text-white">iPhone 12 | 128GB | Green (Chính hãng)</h1>
-                            <img  className="img-fluid" src="./fe/assets/img/pngwing.com.png" />
+                            <img src="./fe/assets/img/about-hero.svg" alt="About Hero" />
                         </div>
                     </div>
                 </div>
@@ -25,8 +24,8 @@ function About() {
                     <div className="col-lg-6 m-auto">
                         <h1 className="h1">Our Services</h1>
                         <p>
-                        “Chúng tôi luôn coi khách hàng là khách mời tham dự một bữa tiệc mà chúng tôi là chủ nhà. 
-                        Mỗi ngày chúng tôi làm việc để mọi khía cạnh quan trọng của trải nghiệm khách hàng tốt hơn một chút”
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            Lorem ipsum dolor sit amet.
                         </p>
                     </div>
                 </div>
@@ -68,7 +67,8 @@ function About() {
                         <div className="col-lg-6 m-auto">
                             <h1 className="h1">Our Brands</h1>
                             <p>
-                            “Chúng tôi nghĩ khách hàng của chúng tôi là người, không phải cái ví”
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                Lorem ipsum dolor sit amet.
                             </p>
                         </div>
                         <div className="col-lg-9 m-auto tempaltemo-carousel">

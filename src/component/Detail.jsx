@@ -227,7 +227,7 @@ export const Detail = () => {
                             <li>
                               <a
                                 className="btn btn-success text-white mt-2"
-                                onClick={(e) => moveToDetail(item)}
+                                href="shop-single.html"
                               >
                                 <i className="far fa-eye"></i>
                               </a>
