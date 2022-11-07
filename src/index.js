@@ -11,6 +11,7 @@ import Register from './component/member/Register';
 import Login from './component/member/Login';
 import Cart from './component/shop/Cart';
 import Blog from './component/blog/Blog';
+import BlogDetail from './component/blog/BlogDetail';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -27,6 +28,7 @@ root.render(
         <Route path='/login' element={<Login />} />
         <Route path='/cart' element={<Cart />} />
         <Route path='/blog' element={<Blog />} />
+        <Route path='/detail' element={<BlogDetail/>}/>
       </Routes>
     </App>
   </Router>

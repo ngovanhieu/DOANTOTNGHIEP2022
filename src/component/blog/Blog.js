@@ -51,9 +51,9 @@ function Blog() {
                                             </div>
                                         </div>
                                         <div className="blog-detail">
-                                            <button>
-                                                <Link to="/blogDetail"></Link> Read more
-                                            </button>
+                                            {/* <button> */}
+                                                <Link to="/BlogDetail">Read more</Link> 
+                                            {/* </button> */}
                                         </div>
                                     </div>
                                 </div>
