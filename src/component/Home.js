@@ -1,11 +1,12 @@
 // import { useState } from "react";
 import axios from "axios";
+import { useState } from "react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import StarRatings from "react-star-ratings";
+import Rate from "./Rate";
 
 function Home() {
-    // const rate = 3.7
+
     useEffect(() => {
         axios.get("http://localhost:3000/Home")
             .then((res) => {
@@ -153,14 +154,7 @@ function Home() {
                                 <div className="card-body">
                                     <ul className="list-unstyled d-flex justify-content-between">
                                         <li>
-                                            <StarRatings
-                                                className="start-rating"
-                                                rating={Math.floor(Math.random() * (5 - 1 + 1) + 1)}
-                                                starRatedColor="#59ab6e"
-                                                numberOfStars={5}
-                                                name="rate"
-                                            >
-                                            </StarRatings>
+                                            {<Rate />}
 
                                         </li>
                                         <li className="text-muted text-right">18.990.000 vnđ</li>
@@ -182,14 +176,7 @@ function Home() {
                                 <div className="card-body">
                                     <ul className="list-unstyled d-flex justify-content-between">
                                         <li>
-                                            <StarRatings
-                                                className="start-rating"
-                                                rating={Math.floor(Math.random() * (5 - 1 + 1) + 1)}
-                                                starRatedColor="#59ab6e"
-                                                numberOfStars={5}
-                                                name="rate"
-                                            >
-                                            </StarRatings>
+                                            {<Rate />}
                                         </li>
                                         <li className="text-muted text-right">49.990.000 vnđ</li>
                                     </ul>
@@ -210,14 +197,7 @@ function Home() {
                                 <div className="card-body">
                                     <ul className="list-unstyled d-flex justify-content-between">
                                         <li>
-                                            <StarRatings
-                                                className="start-rating"
-                                                rating={Math.floor(Math.random() * (5 - 1 + 1) + 1)}
-                                                starRatedColor="#59ab6e"
-                                                numberOfStars={5}
-                                                name="rate"
-                                            >
-                                            </StarRatings>
+                                            {<Rate />}
                                         </li>
                                         <li className="text-muted text-right">36.000.000 vnđ</li>
                                     </ul>

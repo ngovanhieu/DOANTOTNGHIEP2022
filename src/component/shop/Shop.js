@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Pagination from 'react-bootstrap/Pagination';
+import Rate from "../Rate";
 
 export const Shop = () => {
   const [data, setData] = useState([]);
@@ -57,17 +58,17 @@ export const Shop = () => {
             <h1 className="h2 pb-4">Categories</h1>
             <ul className="list-unstyled templatemo-accordion">
               <li className="">
-                <a className="collapsed p-3 d-flex justify-content-between h3 text-decoration-none">
+                <a className="collapsed p-3 d-flex justify-content-between h3 text-decoration-none" href="*">
                   Iphone
                 </a>
               </li>
               <li className="">
-                <a className="collapsed p-3 d-flex justify-content-between h3 text-decoration-none">
+                <a className="collapsed p-3 d-flex justify-content-between h3 text-decoration-none" href="*">
                   Samsung
                 </a>
               </li>
               <li className="">
-                <a className="collapsed p-3 d-flex justify-content-between h3 text-decoration-none">
+                <a className="collapsed p-3 d-flex justify-content-between h3 text-decoration-none" href="*">
                   Product
                 </a>
               </li>
@@ -79,17 +80,17 @@ export const Shop = () => {
               <div className="col-md-6">
                 <ul className="list-inline shop-top-menu pb-3 pt-1">
                   <li className="list-inline-item">
-                    <a className="h3 text-dark text-decoration-none mr-3">
+                    <a className="h3 text-dark text-decoration-none mr-3" href="*">
                       ALOPHONE
                     </a>
                   </li>
                   <li className="list-inline-item">
-                    <a className="h3 text-dark text-decoration-none mr-3">
+                    <a className="h3 text-dark text-decoration-none mr-3" href="*">
                       |
                     </a>
                   </li>
                   <li className="list-inline-item">
-                    <a className="h3 text-dark text-decoration-none">Shop</a>
+                    <a className="h3 text-dark text-decoration-none" href="*">Shop</a>
                   </li>
 
                 </ul>
@@ -163,11 +164,7 @@ export const Shop = () => {
                       </ul>
                       <ul className="list-unstyled d-flex justify-content-center mb-1">
                         <li>
-                          <i className="text-warning fa fa-star"></i>
-                          <i className="text-warning fa fa-star"></i>
-                          <i className="text-warning fa fa-star"></i>
-                          <i className="text-muted fa fa-star"></i>
-                          <i className="text-muted fa fa-star"></i>
+                          {<Rate />}
                         </li>
                       </ul>
                       <p className="text-center mb-0"> Giá: {item?.price}VND</p>

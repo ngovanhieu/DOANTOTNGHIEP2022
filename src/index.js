@@ -8,10 +8,10 @@ import About from './component/About';
 import Home from './component/Home';
 import Contact from './component/Contact';
 import Register from './component/member/Register';
-import { Detail } from './component/Detail';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import Login from './component/member/Login';
 import Cart from './component/shop/Cart';
+import Blog from './component/blog/Blog';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -25,8 +25,8 @@ root.render(
         <Route path='/contact' element={<Contact />} />
         <Route path='/register' element={<Register />} />
         <Route path='/login' element={<Login />} />
-        <Route path='/detail/:id' element={<Detail />} />
-        <Route path='/Cart' element={<Cart />} />
+        <Route path='/cart' element={<Cart />} />
+        <Route path='/blog' element={<Blog />} />
       </Routes>
     </App>
   </Router>

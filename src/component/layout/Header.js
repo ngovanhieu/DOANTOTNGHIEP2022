@@ -1,8 +1,7 @@
-import { Link, useNavigate } from "react-router-dom";
-
+// import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 function Header() {
 
-    const navigate = useNavigate()
 
     function renderLogin() {
         let checkLogin = localStorage.getItem("checkLogin")
@@ -56,7 +55,7 @@ function Header() {
                 <div className="container d-flex justify-content-between align-items-center">
 
                     <a className="navbar-brand text-success logo h1 align-self-center" href="index.html">
-                        <img href="http://localhost:3000/Shop" src="https://f7-zpcloud.zdn.vn/8694324151068249830/09111a48751eb340ea0f.jpg" ></img>
+                        <img alt="" href="http://localhost:3000/Shop" src="https://f7-zpcloud.zdn.vn/8694324151068249830/09111a48751eb340ea0f.jpg" ></img>
                     </a>
 
                     <button className="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -71,16 +70,20 @@ function Header() {
                                     {/* <a className="nav-link" href="index.html">Home</a> */}
                                 </li>
                                 <li className="nav-item">
-                                    <Link to="/About" className="nav-link">About</Link>
-                                    {/* <a className="nav-link" href="about.html">About</a> */}
-                                </li>
-                                <li className="nav-item">
                                     <Link to="/Shop" className="nav-link">Shop</Link>
                                     {/* <a className="nav-link" href="shop.html">Shop</a> */}
                                 </li>
                                 <li className="nav-item">
+                                    <Link to="/Blog" className="nav-link">Blog</Link>
+                                    {/* <a className="nav-link" href="contact.html">Contact</a> */}
+                                </li>
+                                <li className="nav-item">
                                     <Link to="/Contact" className="nav-link">Contact</Link>
                                     {/* <a className="nav-link" href="contact.html">Contact</a> */}
+                                </li>
+                                <li className="nav-item">
+                                    <Link to="/About" className="nav-link">About</Link>
+                                    {/* <a className="nav-link" href="about.html">About</a> */}
                                 </li>
                             </ul>
                         </div>
