@@ -6,22 +6,22 @@ function Cart() {
         <>
             <div className="container py-5" style={{ backgroundColor: "#E8F9FD" }}>
                 <div className="row col-md-12">
-                    <div className="col-lg-2">
+                    <div className="col-md-2">
                         <div className="category">
                             <h1 className="h2 text-center py-2">Categories</h1>
                             <ul className="list-unstyled templatemo-accordion">
                                 <li className="">
-                                    <a className="collapsed p-3 d-flex justify-content-between text-decoration-none">
+                                    <a className="collapsed p-3 d-flex justify-content-between text-decoration-none" href="*">
                                         Iphone
                                     </a>
                                 </li>
                                 <li className="">
-                                    <a className="collapsed p-3 d-flex justify-content-between text-decoration-none">
+                                    <a className="collapsed p-3 d-flex justify-content-between text-decoration-none" href="*">
                                         Samsung
                                     </a>
                                 </li>
                                 <li className="">
-                                    <a className="collapsed p-3 d-flex justify-content-between text-decoration-none">
+                                    <a className="collapsed p-3 d-flex justify-content-between text-decoration-none" href="*">
                                         Product
                                     </a>
                                 </li>

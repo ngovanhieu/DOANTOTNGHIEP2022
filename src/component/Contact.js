@@ -18,7 +18,7 @@ function Contact() {
                 </div>
                 <style>.mapouter{{ position: "relative", textalign: "right", width: "100%", height: "400px" }}.gmap_canvas {{ overflow: "hidden", background: "none!important", width: "100%", height: "400px" }}.gmap_iframe {{ height: "400px!important" }}</style>
             </div> */}
-            <div className="container py-5">
+            <div className="container py-5" style={{ backgroundColor: "#CEFFE0" }}>
                 <div className="row py-5">
                     <form className="col-md-9 m-auto" method="post">
                         <div className="row">
