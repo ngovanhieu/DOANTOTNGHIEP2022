@@ -41,13 +41,13 @@ export const Shop = () => {
       </Pagination.Item>,
     );
   }
-  useEffect(() => {
-    axios.get("http://localhost:3000/Shop")
-      .then((res) => {
-        console.log(res)
-      })
-      .catch(error => console.log(error))
-  }, [])
+  // useEffect(() => {
+  //   axios.get("http://localhost:3000/Shop")
+  //     .then((res) => {
+  //       console.log(res)
+  //     })
+  //     .catch(error => console.log(error))
+  // }, [])
 
   return (
     <>
