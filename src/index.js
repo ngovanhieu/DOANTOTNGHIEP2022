@@ -3,12 +3,13 @@ import reportWebVitals from './reportWebVitals';
 import ReactDOM from 'react-dom/client';
 import React from 'react';
 import App from './App';
-import Shop from './component/Shop';
+import Shop from './component/shop/Shop';
 import About from './component/About';
 import Home from './component/Home';
 import Contact from './component/Contact';
 import Register from './component/member/Register';
 import Login from './component/member/Login';
+import Cart from './component/shop/Cart';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -23,6 +24,7 @@ root.render(
         <Route path='/contact' element={<Contact />} />
         <Route path='/register' element={<Register />} />
         <Route path='/login' element={<Login />} />
+        <Route path='/cart' element={<Cart />} />
       </Routes>
     </App>
   </Router>

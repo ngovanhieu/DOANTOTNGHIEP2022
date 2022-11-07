@@ -1,0 +1,77 @@
+.category{
+    background-color: #F8FFDB ;
+    /* padding-top: 4px; */
+    border-radius: 10%;
+    box-shadow: 0 0 8px 4px #ccc;
+}
+
+.category ul li{
+    border-top: 1px solid #BCEAD5;
+}
+
+.cart{
+    background-color: #F8FFDB;
+    border-radius: 20px;
+    box-shadow: 0 0 8px 4px #ccc;
+}
+.cart table thead{
+    margin-bottom: 8px;
+    padding: 0 0 8px 0 !important;
+}
+.cart table thead tr td{
+    border-bottom: 2px solid;
+}
+.cart table tbody {
+    margin-top: 8px;
+}
+.cart table tbody tr td img{
+    max-width: 30%;
+    padding: 4px;
+}
+.cart table tbody tr{
+    border-top: 1px solid #BCEAD5;
+}
+.cart table tbody tr td .qty{
+    margin: 0 18%;
+}
+.cart table tbody tr td .qty button{
+    max-width: 20%;
+    border: 1.5px solid #BCEAD5;
+}
+
+.cart table tbody tr td .qty input{
+    max-width: 20%;
+    margin: 0 8px;
+}
+.cart table tbody tr td .other button{
+    /* margin: 0 auto; */
+}
+.cart table tbody .total td{
+    border-collapse: collapse;
+}
+/*  */
+.total h3{
+    margin: 0 66% !important;
+}
+.total .total-qty,
+.total .total-price,
+.total .total-buy{
+    margin: 0 0 2% 50%;
+}
+.total .input-total{
+    max-width: 20%;
+    border: none;
+    box-shadow: 0 0 5px 1px #59CE8F;
+    text-align: center;
+}
+.total button{
+    color: #FFFDE3;
+    background-color: #FF1E1E;
+    border: none;
+    border-radius: 10px;
+    margin: 0 60%;
+    max-width: 31%;
+}
+.total button:hover{
+    opacity: 80%;
+}

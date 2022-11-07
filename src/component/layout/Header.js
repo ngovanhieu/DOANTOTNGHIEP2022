@@ -1,8 +1,7 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-
 function Header() {
-    // const [checkLogin, setCheckLogin] = useState();
+
     const navigate = useNavigate()
 
     function renderLogin() {
@@ -18,10 +17,10 @@ function Header() {
         } else {
             return (
                 <>
-                    <a className="nav-icon position-relative text-decoration-none" href="google.com">
+                    <Link to="/Cart" className="nav-icon position-relative text-decoration-none">
                         <i className="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
                         <span className="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">7</span>
-                    </a>
+                    </Link>
                     <Link onClick={clickLogout} to="/Login" className="nav-icon position-relative text-decoration-none" style={{ color: "red" }}>
                         <i className="fas fa-user-check text-dark mr-3" style={{ color: "red" }}></i> Logout
                     </Link>
