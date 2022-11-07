@@ -3,7 +3,8 @@ import StarRatings from "react-star-ratings";
 
 
 function Rate() {
-    const [rate, setRate] = useState(Math.floor(Math.random() * (5 - 1 + 1) + 1));
+    let star = (Math.random() * (5 - 1 + 1) + 1);
+    const [rate, setRate] = useState((star + star + star) / 3);
 
     function changeRate(newRating, name) {
         setRate(newRating)

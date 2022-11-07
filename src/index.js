@@ -10,6 +10,7 @@ import Contact from './component/Contact';
 import Register from './component/member/Register';
 import Login from './component/member/Login';
 import Cart from './component/shop/Cart';
+import Blog from './component/blog/Blog';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -25,6 +26,7 @@ root.render(
         <Route path='/register' element={<Register />} />
         <Route path='/login' element={<Login />} />
         <Route path='/cart' element={<Cart />} />
+        <Route path='/blog' element={<Blog />} />
       </Routes>
     </App>
   </Router>

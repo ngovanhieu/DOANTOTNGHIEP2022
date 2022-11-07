@@ -1,8 +1,7 @@
 // import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 function Header() {
 
-    const navigate = useNavigate()
 
     function renderLogin() {
         let checkLogin = localStorage.getItem("checkLogin")
@@ -71,16 +70,20 @@ function Header() {
                                     {/* <a className="nav-link" href="index.html">Home</a> */}
                                 </li>
                                 <li className="nav-item">
-                                    <Link to="/About" className="nav-link">About</Link>
-                                    {/* <a className="nav-link" href="about.html">About</a> */}
-                                </li>
-                                <li className="nav-item">
                                     <Link to="/Shop" className="nav-link">Shop</Link>
                                     {/* <a className="nav-link" href="shop.html">Shop</a> */}
                                 </li>
                                 <li className="nav-item">
+                                    <Link to="/Blog" className="nav-link">Blog</Link>
+                                    {/* <a className="nav-link" href="contact.html">Contact</a> */}
+                                </li>
+                                <li className="nav-item">
                                     <Link to="/Contact" className="nav-link">Contact</Link>
                                     {/* <a className="nav-link" href="contact.html">Contact</a> */}
+                                </li>
+                                <li className="nav-item">
+                                    <Link to="/About" className="nav-link">About</Link>
+                                    {/* <a className="nav-link" href="about.html">About</a> */}
                                 </li>
                             </ul>
                         </div>
