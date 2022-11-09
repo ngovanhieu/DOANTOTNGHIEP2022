@@ -1,0 +1,17 @@
+.comment{
+    /* float: right; */
+    /* margin: 0 5% 0px 0; */
+    /* background-color: #ccc; */
+    box-shadow: 0 0 6px 3px #ccc;
+    border-radius: 15px;
+}
+.comment h1{
+    padding: 0 4px;
+}
+.comment .comment-content textarea{
+    margin: 0 0 0 5%;
+    border: none;
+    box-shadow: 0 0 6px 3px #ccc;
+    border-radius: 15px;
+    padding: 4px 2px;
+}

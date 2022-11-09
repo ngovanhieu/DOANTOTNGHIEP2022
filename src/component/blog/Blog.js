@@ -51,9 +51,10 @@ function Blog() {
                                             </div>
                                         </div>
                                         <div className="blog-detail">
-                                            {/* <button> */}
-                                                <Link to="/BlogDetail">Read more</Link> 
-                                            {/* </button> */}
+                                            <Link to="/BlogDetail" className="btn button">Read more</Link>
+                                            {/* <Link to={"/BlogDetail"} className="nav-icon position-relative text-decoration-none">
+                                                <i className="fas fa-user-check text-dark mr-3"> Login</i>
+                                            </Link> */}
                                         </div>
                                     </div>
                                 </div>
@@ -103,7 +104,7 @@ function Blog() {
                                             </div>
                                         </div>
                                         <div className="blog-detail">
-                                            <button>Read more</button>
+                                            <Link to="/BlogDetail" className="btn button">Read more</Link>
                                         </div>
                                     </div>
                                 </div>
