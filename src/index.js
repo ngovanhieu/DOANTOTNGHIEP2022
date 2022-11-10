@@ -32,12 +32,10 @@ root.render(
         <Route path='/login' element={<Login />} />
         <Route path='/cart' element={<Cart />} />
         <Route path='/blog' element={<Blog />} />
-        <Route path='/detail/:id' element={<Detail/>}/>
-        <Route path='/blogdetail' element={<BlogDetail />}></Route>
 
       </Routes>
     </App>
-  </Router>
+  </Router >
 );
 
 // If you want to start measuring performance in your app, pass a function
