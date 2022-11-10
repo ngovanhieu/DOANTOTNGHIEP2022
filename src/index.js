@@ -12,7 +12,11 @@ import Login from './component/member/Login';
 import Cart from './component/shop/Cart';
 import Blog from './component/blog/Blog';
 import BlogDetail from './component/blog/BlogDetail';
-
+import { Detail } from './component/Detail';
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -28,7 +32,7 @@ root.render(
         <Route path='/login' element={<Login />} />
         <Route path='/cart' element={<Cart />} />
         <Route path='/blog' element={<Blog />} />
-        <Route path='/blogdetail' element={<BlogDetail />}></Route>
+
       </Routes>
     </App>
   </Router >

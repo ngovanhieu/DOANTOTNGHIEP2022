@@ -21,7 +21,6 @@ function Register() {
         e.preventDefault();
         let checkInput = true;
         const errSubmit = {};
-
         if (itemRegis.fullname == "") {
             checkInput = false;
             errSubmit.fullname = "Nhap ho va ten";
