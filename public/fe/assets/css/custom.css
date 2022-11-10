@@ -29,6 +29,9 @@ li.text-muted.text-right {
     font-size: 24px !important;
 }
 
+.productName{
+    height: 30px !important;
+}
 .av-max {
     max-width: 100% !important;
 }
@@ -225,6 +228,8 @@ li.text-muted.text-right {
 }
 .list-inline-item{
     cursor: pointer;
+    /* background-color: rgb(226, 226, 226); */
 }
+
 /*  */
 

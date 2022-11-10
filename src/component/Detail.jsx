@@ -20,7 +20,7 @@ export const Detail = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 5,
     slidesToScroll: 1,
   };
 
@@ -36,12 +36,13 @@ export const Detail = () => {
   const fetchData = async () => {
     setLoading(true);
     axios
-      .get(`http://localhost:5000/phone/${id}`)
+      .get(`http://localhost:5000/api/getProductById/${id}`)
       .then(function (response) {
         // handle success
-        setData(response.data);
+        console.log(response);
+        setData(response.data.response);
         axios
-          .get(`http://localhost:5000/phone/search/?q=${response.data.productBrand}`)
+          .get(`http://localhost:5000/api/searchProduct?q=${response.data.response.productBrand}`)
           .then(function (response) {
             setDataBrand(response.data);
             setLoading(false);
@@ -219,7 +220,6 @@ export const Detail = () => {
                             <li>
                               <a
                                 className="btn btn-success text-white"
-                                href="shop-single.html"
                               >
                                 <i className="far fa-heart"></i>
                               </a>
@@ -227,7 +227,7 @@ export const Detail = () => {
                             <li>
                               <a
                                 className="btn btn-success text-white mt-2"
-                                href="shop-single.html"
+                                onClick={(e) => moveToDetail(item)}
                               >
                                 <i className="far fa-eye"></i>
                               </a>
@@ -235,7 +235,6 @@ export const Detail = () => {
                             <li>
                               <a
                                 className="btn btn-success text-white mt-2"
-                                href="shop-single.html"
                               >
                                 <i className="fas fa-cart-plus"></i>
                               </a>
@@ -244,12 +243,11 @@ export const Detail = () => {
                         </div>
                       </div>
                       <div className="card-body">
-                        <a
-                          href="shop-single.html"
-                          className="h3 text-decoration-none"
+                        <p
+                          className="h3 text-decoration-none productName"
                         >
                           {item?.productName}
-                        </a>
+                        </p>
                         <ul className="w-100 list-unstyled d-flex justify-content-between mb-0">
                           <li> Hãng: {item?.productBrand}</li>
                           <li className="pt-2">

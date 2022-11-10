@@ -1,0 +1,25 @@
+.comment{
+    box-shadow: 0 0 6px 3px #ccc;
+    border-radius: 15px;
+    padding: 12px;
+    margin: 0 -14px 0 -14px;
+}
+.comment h1{
+    padding: 0 4px;
+}
+.comment .comment-content textarea{
+    margin: 0 0 0 5%;
+    border: none;
+    box-shadow: 0 0 6px 3px #ccc;
+    border-radius: 15px;
+    padding: 4px 2px;
+    margin-bottom: 8px;
+}
+.button-post{
+    margin: 0 0 0 80%;
+    box-shadow: 0 0 6px 3px #b3ffae;
+    border: none;
+    background-color: #54B435;
+    color: #fff;
+    border-radius: 20px;
+}

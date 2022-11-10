@@ -7,14 +7,7 @@ import Rate from "./Rate";
 
 function Home() {
 
-    useEffect(() => {
-        axios.get("http://localhost:3000/Home")
-            .then((res) => {
-                console.log(res);
-            })
-            .catch(error => console.log(error))
-    }, [])
-
+ 
     return (
         <>
             <div id="template-mo-zay-hero-carousel" className="carousel slide" data-bs-ride="carousel">
