@@ -1,3 +1,5 @@
+import Map from "./Map";
+
 function Contact() {
     return (
         <>
@@ -22,20 +24,20 @@ function Contact() {
                 <div className="row py-5">
                     <form className="col-md-9 m-auto" method="post">
                         <div className="row">
-                            <div className="form-group col-md-6 mb-3">
+                            <div className="form-group col-md-6 mb-2">
                                 <label for="inputname">Name</label>
                                 <input type="text" className="form-control mt-1" id="name" name="name" placeholder="Name" />
                             </div>
-                            <div className="form-group col-md-6 mb-3">
+                            <div className="form-group col-md-6 mb-2">
                                 <label for="inputemail">Email</label>
                                 <input type="email" className="form-control mt-1" id="email" name="email" placeholder="Email" />
                             </div>
                         </div>
-                        <div className="mb-3 form-group">
+                        <div className="mb-2 form-group">
                             <label for="inputsubject">Subject</label>
                             <input type="text" className="form-control mt-1" id="subject" name="subject" placeholder="Subject" />
                         </div>
-                        <div className="mb-3 form-group">
+                        <div className="mb-2 form-group">
                             <label for="inputmessage">Message</label>
                             <textarea className="form-control mt-1" id="message" name="message" placeholder="Message" rows="8"></textarea>
                         </div>
@@ -45,6 +47,12 @@ function Contact() {
                             </div>
                         </div>
                     </form>
+                </div>
+            </div>
+            <div className="container py-4" style={{ borderRadius: "20px", boxshadow: "0 0 5px 1px #59CE8F" }}>
+                <h1 className="text-center">Your address</h1>
+                <div className="col-md-12" style={{ display: "flex", flexDirection: "row", width: "100%", height: "100vh" }}>
+                    <Map />
                 </div>
             </div>
         </>
