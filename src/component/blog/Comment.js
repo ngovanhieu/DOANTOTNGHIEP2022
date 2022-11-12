@@ -6,11 +6,7 @@ function Comment() {
         <>
             <div className="col-md-9 container py-5">
                 <div className="comment">
-                    <h1 className="h1">Comment</h1>
-                    <div className="comment-content col-md-12">
-                        <textarea className="col-md-11" placeholder="your comment" rows={6}></textarea>
-                        <div className="button-post">
-                            <button className="button-post">
+
                                 <FontAwesomeIcon icon={faCheck} /> Post comment
                             </button>
                         </div>

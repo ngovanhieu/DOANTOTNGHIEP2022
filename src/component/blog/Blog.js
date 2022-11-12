@@ -28,8 +28,7 @@ function Blog() {
                                                 {<Rate />}
                                             </div>
                                         </div>
-                                        <div className="blog-detail">
-                                        <Link to="/BlogDetail" className="btn button">Read more</Link>
+
                                         </div>
                                     </div>
                                 </div>
