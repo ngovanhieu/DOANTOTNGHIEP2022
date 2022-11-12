@@ -230,6 +230,12 @@ li.text-muted.text-right {
     cursor: pointer;
     /* background-color: rgb(226, 226, 226); */
 }
-
+.customname{
+    margin-right: 40px;
+    margin-top: 30px;
+    color: rgb(230, 13, 13);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
 /*  */
 

@@ -1,11 +1,62 @@
 import { faMinus, faPlus, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Alert } from "@mui/material";
+import axios from "axios";
+import { useEffect } from "react";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { setDisplayAlert, setItemPropAlert } from "../../redux";
 
 function Cart() {
   const [message, setMessage] = useState("");
   const [checkAlert, setCheckAlert] = useState(false);
+  const [data, setData] = useState([]);
+  const [checkRemove, setCheckRemove] = useState(false);
+  const [quantity, setQuantity] = useState(1);
+  let customerName = localStorage.getItem("customerName");
+  let phone = localStorage.getItem("phone");
+  const dispatch = useDispatch();
+  useEffect(() => {
+    fetchData();
+  }, [checkRemove]);
+  const fetchData = async () => {
+    axios
+      .get(`http://localhost:5000/api/getOrders`)
+      .then(function (response) {
+        console.log(response);
+        setData(response.data.orders);
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+      });
+  };
+
+  const handleQuantity = (check) => {
+    if (check === "plus") {
+      setQuantity(quantity + 1);
+    } else if (quantity === 1) {
+      setQuantity(1);
+    } else {
+      setQuantity(quantity - 1);
+    }
+  };
+  const removeOrder = (item) => {
+    axios
+      .delete(`http://localhost:5000/api/removeOrder/${item._id}`)
+      .then(function (response) {
+        console.log(response);
+        dispatch(setDisplayAlert(true));
+        dispatch(setItemPropAlert("Xóa thành công"));
+        setCheckRemove(!checkRemove);
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+        dispatch(setDisplayAlert(true));
+        dispatch(setItemPropAlert("Xóa thất bại"));
+      });
+  };
   return (
     <>
       {checkAlert && (
@@ -69,80 +120,90 @@ function Cart() {
                   </tr>
                 </thead>
                 <tbody className="col-md-12 ">
-                  <tr className="my-5">
-                    <td
-                      className="col-md-1"
-                      style={{ color: "#379237", fontWeight: "600" }}
-                    >
-                      <p style={{ textAlign: "center", margin: "auto 0" }}>1</p>
-                    </td>
-                    <td className="col-md-1">
-                      <div className="img-product">
-                        <img
-                          alt="img"
-                          src="https://stcv4.hnammobile.com/uploads/products/colors/6/apple-iphone-14-pro-max-256gb-ll-01663680113.jpg"
-                          style={{ maxWidth: "100%" }}
-                        ></img>
-                      </div>
-                    </td>
-                    <td className="col-md-2">
-                      <p
-                        style={{
-                          textAlign: "center",
-                          margin: "auto 0",
-                          color: "#379237",
-                        }}
-                      >
-                        IP 14 pro max
-                      </p>
-                    </td>
-                    <td className="col-md-2">
-                      <p
-                        style={{
-                          textAlign: " center",
-                          margin: "auto 0",
-                          color: "#379237",
-                        }}
-                      >
-                        {Math.floor(
-                          Math.random() * (40000000 - 10000000 + 10000000) +
-                            10000000
-                        )}{" "}
-                        vnđ
-                      </p>
-                    </td>
-                    <td className="col-md-3">
-                      <div className="qty row col-md-12">
-                        <button>
-                          <FontAwesomeIcon icon={faMinus}></FontAwesomeIcon>
-                          {/* <i className="">-</i> */}
-                        </button>
-                        <input
-                          type="text"
-                          value={1}
-                          style={{ color: "#379237" }}
-                        />
-                        <button>
-                          <FontAwesomeIcon icon={faPlus}></FontAwesomeIcon>
-                          {/* <i className="">+</i> */}
-                        </button>
-                      </div>
-                    </td>
-                    <td className="col-md-2 total-price ">
-                      <input style={{ border: "1px solid #e0e0e0" }} />
-                    </td>
-                    <td className=" col-md-1 other">
-                      <button
-                        style={{
-                          maxWidth: "40%",
-                          border: "1.5px solid #BCEAD5",
-                          margin: "0 30%",
-                        }}
-                      >
-                        <FontAwesomeIcon icon={faTrash}></FontAwesomeIcon>
-                      </button>
-                    </td>
-                  </tr>
+                  {data.length > 0 ? (
+                    data?.map((item, index) => (
+                      <tr className="my-5" key={index}>
+                        <td
+                          className="col-md-1"
+                          style={{ color: "#379237", fontWeight: "600" }}
+                        >
+                          <p style={{ textAlign: "center", margin: "auto 0" }}>
+                            1
+                          </p>
+                        </td>
+                        <td className="col-md-1">
+                          <div className="img-product">
+                            <img
+                              alt="img"
+                              src={item.image}
+                              style={{ maxWidth: "100%" }}
+                            ></img>
+                          </div>
+                        </td>
+                        <td className="col-md-2">
+                          <p
+                            style={{
+                              textAlign: "center",
+                              margin: "auto 0",
+                              color: "#379237",
+                            }}
+                          >
+                            {item.Brand}
+                          </p>
+                        </td>
+                        <td className="col-md-2">
+                          <p
+                            style={{
+                              textAlign: " center",
+                              margin: "auto 0",
+                              color: "#379237",
+                            }}
+                          >
+                            {item.Total}
+                            vnđ
+                          </p>
+                        </td>
+                        <td className="col-md-3">
+                          <div className="qty row col-md-12">
+                            <button onClick={(e) => handleQuantity("minus")}>
+                              <FontAwesomeIcon icon={faMinus}></FontAwesomeIcon>
+                              {/* <i className="">-</i> */}
+                            </button>
+                            <input
+                              type="text"
+                              value={quantity}
+                              style={{ color: "#379237" }}
+                            />
+                            <button onClick={(e) => handleQuantity("plus")}>
+                              <FontAwesomeIcon icon={faPlus}></FontAwesomeIcon>
+                              {/* <i className="">+</i> */}
+                            </button>
+                          </div>
+                        </td>
+                        <td className="col-md-2 total-price ">
+                          {item.price * item.Amount} vnđ
+                        </td>
+                        <td className=" col-md-1 other">
+                          <button
+                            style={{
+                              maxWidth: "40%",
+                              border: "1.5px solid #BCEAD5",
+                              margin: "0 30%",
+                            }}
+                            onClick={(e) => removeOrder(item)}
+                          >
+                            <FontAwesomeIcon icon={faTrash}></FontAwesomeIcon>
+                          </button>
+                        </td>
+                      </tr>
+                    ))
+                  ) : (
+                    <tr>
+                      <td style={{ textAlign: "center" }} colspan="7">
+                        Không có sản phẩm
+                      </td>
+                    </tr>
+                  )}
                 </tbody>
               </table>
             </div>
@@ -150,14 +211,10 @@ function Cart() {
               <div className="infor-ship col-md-3">
                 <h3>Shipment Details</h3>
                 <p>
-                  Fullname: <span>xxxxxxxxxx</span>
+                  Fullname: <span>{customerName}</span>
                 </p>
                 <p>
-                  Phone number: <span>01234567899</span>
-                </p>
-                <p>Address: xxxxxxxxxx</p>
-                <p>
-                  Estimated delivery date: <span>dd/MM/yyyy</span>
+                  Phone number: <span>{phone}</span>
                 </p>
               </div>
               <div className="total col-md-9">

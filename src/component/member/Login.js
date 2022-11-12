@@ -1,6 +1,8 @@
 import axios from "axios";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
+import { setDisplayAlert, setItemPropAlert } from "../../redux";
 
 function Login() {
   const [itemLogin, setItemLogin] = useState({
@@ -11,7 +13,7 @@ function Login() {
   const ktMail =
     /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
   const navigate = useNavigate();
-
+  const dispatch = useDispatch();
   function hanldeIn(e) {
     const nameIn = e.target.name;
     const value = e.target.value;
@@ -48,12 +50,18 @@ function Login() {
           password: itemLogin.pass,
         })
         .then(function (response) {
-            console.log(response);
-          alert("login is success");
-          localStorage.setItem("checkLogin", true);
+          console.log(response);
+          dispatch(setDisplayAlert(true));
+          dispatch(setItemPropAlert("Đăng Nhập Thành Công"));
+          navigate('/Home')
+          localStorage.setItem("userId", response.data.userId);
+          localStorage.setItem("customerName", response.data.userName);
+          localStorage.setItem("phone", response.data.phone);
           setItemErr("");
         })
         .catch(function (error) {
+          dispatch(setDisplayAlert(true));
+          dispatch(setItemPropAlert("Đăng Nhập Thất Bại"));
           console.log(error);
         });
     }

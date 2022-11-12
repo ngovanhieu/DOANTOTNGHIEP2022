@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Pagination from "react-bootstrap/Pagination";
+import { useDispatch } from "react-redux";
+import { setDisplayAlert, setItemPropAlert } from "../../redux";
 
 export const Shop = () => {
   const [data, setData] = useState([]);
@@ -11,7 +13,10 @@ export const Shop = () => {
   const [defaultTotalData, setDefaultTotalData] = useState([]);
   const [defaultData, setDefaultData] = useState([]);
   const [dataSearch, setDataSearch] = useState("");
-
+  const userId = localStorage.getItem("userId");
+  const cusstomerName = localStorage.getItem("customerName");
+  const phone = localStorage.getItem("phone");
+  const dispatch = useDispatch()
   useEffect(() => {
     fetchData();
   }, [page]);
@@ -28,6 +33,32 @@ export const Shop = () => {
         console.log(response);
       })
       .catch(function (error) {
+        // handle error
+        console.log(error);
+      });
+  };
+
+  const addProductToCart = async (item) => {
+    axios
+      .post(`http://localhost:5000/api/addOrder`, {
+        userId: userId,
+        customerName: cusstomerName,
+        phone: phone,
+        image: item.images,
+        price: item.price,
+        Brand: item.productName,
+        Color: item.price,
+        Amount: 1,
+        Total: item.price,
+      })
+      .then(function (response) {
+        dispatch(setDisplayAlert(true))
+        dispatch(setItemPropAlert("Thêm giỏ hàng thành công"))
+        console.log(response);
+      })
+      .catch(function (error) {
+        dispatch(setDisplayAlert(true))
+        dispatch(setItemPropAlert("Thêm giỏ hàng thất bại"))
         // handle error
         console.log(error);
       });
@@ -155,10 +186,7 @@ export const Shop = () => {
                       <div className="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                         <ul className="list-unstyled">
                           <li>
-                            <a
-                              className="btn btn-success text-white"
-                              href="shop-single.html"
-                            >
+                            <a className="btn btn-success text-white">
                               <i className="far fa-heart"></i>
                             </a>
                           </li>
@@ -171,20 +199,21 @@ export const Shop = () => {
                             </a>
                           </li>
                           <li>
-                            <a
+                            <div
                               className="btn btn-success text-white mt-2"
-                              href="shop-single.html"
+                              onClick={(e) => {
+                                e.stopPropagation()
+                                addProductToCart(item);
+                              }}
                             >
                               <i className="fas fa-cart-plus"></i>
-                            </a>
+                            </div>
                           </li>
                         </ul>
                       </div>
                     </div>
                     <div className="card-body">
-                      <p
-                        className="h3 text-decoration-none productName"
-                      >
+                      <p className="h3 text-decoration-none productName">
                         {item?.productName}
                       </p>
                       <ul className="w-100 list-unstyled d-flex justify-content-between mb-0">
