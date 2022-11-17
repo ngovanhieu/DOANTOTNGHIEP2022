@@ -4,14 +4,22 @@ import axios from "axios";
 import Slider from "react-slick";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Spinner } from "./spinner";
+import { setDisplayAlert, setItemPropAlert } from "../redux";
+import { useDispatch } from "react-redux";
+
 export const Detail = () => {
   const [data, setData] = useState([]);
   const [dataBrand, setDataBrand] = useState([]);
+  const [quantity, setQuantity] = useState(1);
   const [loading, setLoading] = useState(false);
   const location = useLocation();
   const id = location.pathname.split("detail/")[1];
   const navigate = useNavigate();
 
+  const userId = localStorage.getItem("userId");
+  const cusstomerName = localStorage.getItem("customerName");
+  const phone = localStorage.getItem("phone");
+  const dispatch = useDispatch();
   const moveToDetail = (item) => {
     navigate(`/detail/${item._id}`);
   };
@@ -42,7 +50,9 @@ export const Detail = () => {
         console.log(response);
         setData(response.data.response);
         axios
-          .get(`http://localhost:5000/api/searchProduct?q=${response.data.response.productBrand}`)
+          .get(
+            `http://localhost:5000/api/searchProduct?q=${response.data.response.productBrand}`
+          )
           .then(function (response) {
             setDataBrand(response.data);
             setLoading(false);
@@ -51,7 +61,6 @@ export const Detail = () => {
           .catch(function (error) {
             setLoading(false);
             console.log(error);
-
           });
       })
       .catch(function (error) {
@@ -59,9 +68,50 @@ export const Detail = () => {
         setLoading(false);
       });
   };
+  const addProductToCart = () => {
+    if (cusstomerName) {
+      axios
+        .post(`http://localhost:5000/api/addOrder`, {
+          userId: userId,
+          customerName: cusstomerName,
+          phone: phone,
+          image: data.images,
+          price: data.price,
+          Brand: data.productName,
+          Color: data.price,
+          Amount: quantity,
+          Total: data.price,
+        })
+        .then(function (response) {
+          dispatch(setDisplayAlert(true));
+          dispatch(setItemPropAlert("Thêm giỏ hàng thành công"));
+          console.log(response);
+        })
+        .catch(function (error) {
+          dispatch(setDisplayAlert(true));
+          dispatch(setItemPropAlert("Thêm giỏ hàng thất bại"));
+          // handle error
+          console.log(error);
+        });
+    } else {
+      dispatch(setDisplayAlert(true));
+      dispatch(setItemPropAlert("Đăng nhập để tiếp tục!"));
+    }
+  };
+
+  const handleCount = (check) => {
+    if (check === "plus") {
+      setQuantity(quantity + 1);
+    } else if (quantity === 1) {
+      setQuantity(1);
+    } else {
+      setQuantity(quantity - 1);
+    }
+  };
+
   return (
     <>
-      <section className="bg-light">
+      <div className="bg-light">
         <div className="container pb-5">
           <div className="row">
             <div className="col-lg-5 mt-5">
@@ -132,31 +182,30 @@ export const Detail = () => {
                               value="S"
                             />
                           </li>
-                          
                         </ul>
                       </div>
                       <div className="col-auto">
                         <ul className="list-inline pb-3">
                           <li className="list-inline-item text-right">
                             Quantity
-                            <input
-                              type="hidden"
-                              name="product-quanity"
-                              id="product-quanity"
-                              value="1"
-                            />
                           </li>
-                          <li className="list-inline-item">
+                          <li
+                            className="list-inline-item"
+                            onClick={(e) => handleCount("minus")}
+                          >
                             <span className="btn btn-success" id="btn-minus">
                               -
                             </span>
                           </li>
                           <li className="list-inline-item">
                             <span className="badge bg-secondary" id="var-value">
-                              1
+                              {quantity}
                             </span>
                           </li>
-                          <li className="list-inline-item">
+                          <li
+                            className="list-inline-item"
+                            onClick={(e) => handleCount("plus")}
+                          >
                             <span className="btn btn-success" id="btn-plus">
                               +
                             </span>
@@ -166,24 +215,15 @@ export const Detail = () => {
                     </div>
                     <div className="row pb-3">
                       <div className="col d-grid">
-                        <button
-                          type="submit"
-                          className="btn btn-success btn-lg"
-                          name="submit"
-                          value="buy"
-                        >
-                          Buy
-                        </button>
+                        <button className="btn btn-success btn-lg">Buy</button>
                       </div>
                       <div className="col d-grid">
-                        <button
-                          type="submit"
+                        <div
                           className="btn btn-success btn-lg"
-                          name="submit"
-                          value="addtocard"
+                          onClick={addProductToCart}
                         >
                           Add To Cart
-                        </button>
+                        </div>
                       </div>
                     </div>
                   </form>
@@ -192,7 +232,7 @@ export const Detail = () => {
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
       <section className="py-5">
         <div className="container">
@@ -218,9 +258,7 @@ export const Detail = () => {
                         <div className="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                           <ul className="list-unstyled">
                             <li>
-                              <a
-                                className="btn btn-success text-white"
-                              >
+                              <a className="btn btn-success text-white">
                                 <i className="far fa-heart"></i>
                               </a>
                             </li>
@@ -233,9 +271,7 @@ export const Detail = () => {
                               </a>
                             </li>
                             <li>
-                              <a
-                                className="btn btn-success text-white mt-2"
-                              >
+                              <a className="btn btn-success text-white mt-2">
                                 <i className="fas fa-cart-plus"></i>
                               </a>
                             </li>
@@ -243,9 +279,7 @@ export const Detail = () => {
                         </div>
                       </div>
                       <div className="card-body">
-                        <p
-                          className="h3 text-decoration-none productName"
-                        >
+                        <p className="h3 text-decoration-none productName">
                           {item?.productName}
                         </p>
                         <ul className="w-100 list-unstyled d-flex justify-content-between mb-0">

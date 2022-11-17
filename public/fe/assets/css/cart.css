@@ -1,93 +1,110 @@
-.category{
-    background-color: #ffffff ;
-    /* padding-top: 4px; */
-    border-radius: 10%;
-    box-shadow: 0px 0px 5px 2px #ccc;
+.category {
+  background-color: #ffffff;
+  /* padding-top: 4px; */
+  border-radius: 10%;
+  box-shadow: 0px 0px 5px 2px #ccc;
 }
-.alert{
-    position: fixed;
-    top: 150px;
-    right: 50px;
-    animation: upToDown ease-in-out 800ms;
+.alert {
+  position: fixed;
+  top: 150px;
+  right: 50px;
+  animation: upToDown ease-in-out 800ms;
 }
 
 @keyframes upToDown {
-    from{
-        opacity: 0;
-        transform: translateY(-100px);
-    }to{
-        opacity: 1;
-        transform: translateY(0px);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
-.category ul li{
-    border-top: 1px solid #BCEAD5;
+.category ul li {
+  border-top: 1px solid #bcead5;
 }
 
-.cart{
-       background-color: #ffffff;
-    border-radius: 5px;
-    padding: 20px;
-    box-shadow: 0px 0px 5px 2px #ccc;
+.cart {
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0px 0px 5px 2px #ccc;
 }
-.cart table thead{
-    margin-bottom: 8px;
-    padding: 0 0 8px 0 !important;
+.cart table thead {
+  margin-bottom: 8px;
+  padding: 0 0 8px 0 !important;
 }
-.cart table thead tr td{
-    border-bottom: 2px solid;
+.cart table thead tr td {
+  border-bottom: 2px solid;
 }
 .cart table tbody {
-    margin-top: 8px;
+  margin-top: 8px;
 }
-.cart table tbody tr td img{
-    max-width: 30%;
-    padding: 4px;
+.cart table tbody tr td img {
+  max-width: 30%;
+  padding: 4px;
 }
-.cart table tbody tr{
-    border-top: 1px solid #BCEAD5;
+.cart table tbody tr {
+  border-top: 1px solid #bcead5;
 }
-.cart table tbody tr td .qty{
-    margin: 0 18%;
+.cart table tbody tr td .qty {
+  margin: 0 18%;
 }
-.cart table tbody tr td .qty button{
-    max-width: 20%;
-    border: 1.5px solid #BCEAD5;
+.cart table tbody tr td .qty button {
+  max-width: 20%;
+  border: 1.5px solid #bcead5;
 }
 
-.cart table tbody tr td .qty input{
-    max-width: 20%;
-    margin: 0 8px;
+.cart table tbody tr td .qty input {
+  max-width: 20%;
+  margin: 0 8px;
 }
-.cart table tbody tr td .other button{
-    /* margin: 0 auto; */
+.cart table tbody tr td .other button {
+  /* margin: 0 auto; */
 }
-.cart table tbody .total td{
-    border-collapse: collapse;
+.cart table tbody .total td {
+  border-collapse: collapse;
 }
 /*  */
-.total h3{
-    margin: 0 66% !important;
+.total h3 {
+  margin: 0 66% !important;
 }
 .total .total-qty,
 .total .total-price,
-.total .total-buy{
-    margin: 0 0 2% 50%;
+.total .total-buy {
+  /* margin: 0 0 2% 50%; */
 }
-.total .input-total{
-    max-width: 20%;
-    border: none;
-    box-shadow: 0 0 5px 1px #59CE8F;
-    text-align: center;
+.total .input-total {
+  /* max-width: 20%; */
+  border: none;
+  box-shadow: 0 0 5px 1px #59ce8f;
+  text-align: center;
 }
-.total button{
-    color: #FFFDE3;
-    background-color: #FF1E1E;
-    border: none;
-    border-radius: 10px;
-    margin: 0 60%;
-    max-width: 31%;
+.total button {
+  color: #fffde3;
+  background-color: #ff1e1e;
+  border: none;
+  border-radius: 10px;
+  /* margin: 0 60%; */
+  max-width: 31%;
 }
-.total button:hover{
-    opacity: 80%;
+.total button:hover {
+  opacity: 80%;
+}
+
+.btn-submit {
+  /* display: flex; */
+  text-align: center;
+  /* justify-content: last baseline; */
+  width: 50%;
+  background-color: red;
+  color: #fffde3;
+  background-color: #ff1e1e;
+  border: none;
+  border-radius: 10px;
+  /* margin: 0 60%; */
+  margin-top: 30px;
+  margin-left: 50%;
+  cursor: pointer;
 }

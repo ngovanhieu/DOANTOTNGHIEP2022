@@ -3,9 +3,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Alert } from "@mui/material";
 import axios from "axios";
 import { useEffect } from "react";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useDispatch } from "react-redux";
 import { setDisplayAlert, setItemPropAlert } from "../../redux";
+import { Quanlity } from "./quanlity";
 
 function Cart() {
   const [message, setMessage] = useState("");
@@ -15,6 +16,7 @@ function Cart() {
   const [quantity, setQuantity] = useState(1);
   let customerName = localStorage.getItem("customerName");
   let phone = localStorage.getItem("phone");
+  // const ref = useRef([])
   const dispatch = useDispatch();
   useEffect(() => {
     fetchData();
@@ -32,15 +34,21 @@ function Cart() {
       });
   };
 
-  const handleQuantity = (check) => {
-    if (check === "plus") {
-      setQuantity(quantity + 1);
-    } else if (quantity === 1) {
-      setQuantity(1);
-    } else {
-      setQuantity(quantity - 1);
-    }
-  };
+  // const handleQuantity = (check, indexOption) => {
+  //   ref.current.forEach((element, index) => {
+  //     if(index === indexOption){
+  //       // ref.current[index].value
+  //       console.log(ref.current[indexOption], indexOption);
+  //     }
+  //   });
+  //   if (check === "plus") {
+  //     setQuantity(quantity + 1);
+  //   } else if (quantity === 1) {
+  //     setQuantity(1);
+  //   } else {
+  //     setQuantity(quantity - 1);
+  //   }
+  // };
   const removeOrder = (item) => {
     axios
       .delete(`http://localhost:5000/api/removeOrder/${item._id}`)
@@ -122,7 +130,13 @@ function Cart() {
                 <tbody className="col-md-12 ">
                   {data.length > 0 ? (
                     data?.map((item, index) => (
-                      <tr className="my-5" key={index}>
+                      <tr
+                        className="my-5"
+                        key={index}
+                        // ref={(element) => {
+                        //   ref.current[index] = element;
+                        // }}
+                      >
                         <td
                           className="col-md-1"
                           style={{ color: "#379237", fontWeight: "600" }}
@@ -164,21 +178,7 @@ function Cart() {
                           </p>
                         </td>
                         <td className="col-md-3">
-                          <div className="qty row col-md-12">
-                            <button onClick={(e) => handleQuantity("minus")}>
-                              <FontAwesomeIcon icon={faMinus}></FontAwesomeIcon>
-                              {/* <i className="">-</i> */}
-                            </button>
-                            <input
-                              type="text"
-                              value={quantity}
-                              style={{ color: "#379237" }}
-                            />
-                            <button onClick={(e) => handleQuantity("plus")}>
-                              <FontAwesomeIcon icon={faPlus}></FontAwesomeIcon>
-                              {/* <i className="">+</i> */}
-                            </button>
-                          </div>
+                          <Quanlity item={item} />
                         </td>
                         <td className="col-md-2 total-price ">
                           {item.price * item.Amount} vnđ
@@ -207,7 +207,7 @@ function Cart() {
                 </tbody>
               </table>
             </div>
-            <div className="row py-3">
+            <div className="d-flex justify-content-between py-3">
               <div className="infor-ship col-md-3">
                 <h3>Shipment Details</h3>
                 <p>
@@ -217,10 +217,10 @@ function Cart() {
                   Phone number: <span>{phone}</span>
                 </p>
               </div>
-              <div className="total col-md-9">
+              <div className="total col-md-4">
                 <h3>Total</h3>
                 <div className="container" style={{ padding: "8px 0" }}>
-                  <div className="row total-qty col-sm-9">
+                  <div className="row total-qty col-sm-12">
                     <p
                       className="col-sm-4"
                       style={{ textAlign: "right", margin: "auto 0" }}
@@ -229,7 +229,7 @@ function Cart() {
                     </p>
                     <input type="text" className="col-sm-8 input-total" />
                   </div>
-                  <div className="row total-price col-sm-9">
+                  <div className="row total-price col-sm-12">
                     <p
                       className="col-sm-4"
                       style={{ textAlign: "right", margin: "auto 0" }}
@@ -238,7 +238,7 @@ function Cart() {
                     </p>
                     <input type="text" className="col-sm-8 input-total" />
                   </div>
-                  <div className="row total-buy col-sm-9">
+                  <div className="row total-buy col-sm-12">
                     <p
                       className="col-sm-4"
                       style={{ textAlign: "right", margin: "auto 0" }}
@@ -250,7 +250,7 @@ function Cart() {
                       <option>Banking</option>
                     </select>
                   </div>
-                  <button className="col-md-9">Comfirm</button>
+                  <div className="btn-submit col-md-12">Comfirm</div>
                 </div>
               </div>
             </div>

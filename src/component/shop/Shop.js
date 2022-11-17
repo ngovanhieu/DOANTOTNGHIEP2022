@@ -39,6 +39,8 @@ export const Shop = () => {
   };
 
   const addProductToCart = async (item) => {
+    if(cusstomerName){
+
     axios
       .post(`http://localhost:5000/api/addOrder`, {
         userId: userId,
@@ -62,6 +64,11 @@ export const Shop = () => {
         // handle error
         console.log(error);
       });
+    }else{
+      dispatch(setDisplayAlert(true))
+      dispatch(setItemPropAlert("Đăng nhập để tiếp tục!"))
+    }
+
   };
 
   const moveToDetail = (item) => {
