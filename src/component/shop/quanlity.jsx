@@ -9,7 +9,7 @@ import { setDisplayAlert, setItemPropAlert } from "../../redux";
 import EditIcon from "@mui/icons-material/Edit";
 import DoneIcon from "@mui/icons-material/Done";
 
-export const Quanlity = ({ item }) => {
+export const Quanlity = ({ item, setCheckUpdate, checkUpdate }) => {
   const [check, setCheck] = useState(false);
   const [quantity, setQuantity] = useState(1);
   let customerName = localStorage.getItem("customerName");
@@ -51,6 +51,7 @@ export const Quanlity = ({ item }) => {
         console.log(response);
         handleCheck();
         dispatch(setDisplayAlert(true));
+        setCheckUpdate(!checkUpdate);
         dispatch(setItemPropAlert("Cập nhật thành công!"));
       })
       .catch(function (error) {
@@ -123,6 +124,7 @@ export const Quanlity = ({ item }) => {
             }}
           >
             <DoneIcon fontSize="small" onClick={updateProduct} />
+
           </div>
         </div>
       )}

@@ -1,4 +1,4 @@
-import { SET_DATA_PRODUCTS, SET_DISPLAY_ALERT, SET_ITEM_PROP_ALERT, SET_LOADING } from "./constants";
+import { SET_DATA_PAYMENT, SET_DATA_PRODUCTS, SET_DISPLAY_ALERT, SET_ITEM_PROP_ALERT, SET_LOADING } from "./constants";
 
 const initialState = {
   alert: {
@@ -10,6 +10,10 @@ const initialState = {
     values: [],
   },
   isLoadingGlobal: false,
+
+  dataPayment: {
+    values: {}
+  }
 };
 
 const rootReducer = (state = initialState, action) => {
@@ -41,6 +45,13 @@ const rootReducer = (state = initialState, action) => {
         return {
           ...state,
           products: {
+            values: action.payload
+          },
+        };
+      case SET_DATA_PAYMENT:
+        return {
+          ...state,
+          dataPayment: {
             values: action.payload
           },
         };

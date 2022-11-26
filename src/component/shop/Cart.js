@@ -7,10 +7,12 @@ import { useState, useRef } from "react";
 import { useDispatch } from "react-redux";
 import { setDisplayAlert, setItemPropAlert } from "../../redux";
 import { Quanlity } from "./quanlity";
+import ShoppingCartCheckoutIcon from "@mui/icons-material/ShoppingCartCheckout";
 
 function Cart() {
   const [message, setMessage] = useState("");
   const [checkAlert, setCheckAlert] = useState(false);
+  const [checkUpdate, setCheckUpdate] = useState(false);
   const [data, setData] = useState([]);
   const [checkRemove, setCheckRemove] = useState(false);
   const [quantity, setQuantity] = useState(1);
@@ -20,7 +22,7 @@ function Cart() {
   const dispatch = useDispatch();
   useEffect(() => {
     fetchData();
-  }, [checkRemove]);
+  }, [checkRemove, checkUpdate]);
   const fetchData = async () => {
     axios
       .get(`http://localhost:5000/api/getOrders`)
@@ -142,7 +144,7 @@ function Cart() {
                           style={{ color: "#379237", fontWeight: "600" }}
                         >
                           <p style={{ textAlign: "center", margin: "auto 0" }}>
-                            1
+                           {index + 1}
                           </p>
                         </td>
                         <td className="col-md-1">
@@ -178,21 +180,33 @@ function Cart() {
                           </p>
                         </td>
                         <td className="col-md-3">
-                          <Quanlity item={item} />
+                          <Quanlity
+                            item={item}
+                            setCheckUpdate={setCheckUpdate}
+                            checkUpdate={checkUpdate}
+                          />
                         </td>
                         <td className="col-md-2 total-price ">
                           {item.price * item.Amount} vnđ
                         </td>
-                        <td className=" col-md-1 other">
+                        <td className="col-md-1 other ">
                           <button
                             style={{
-                              maxWidth: "40%",
                               border: "1.5px solid #BCEAD5",
-                              margin: "0 30%",
+                              // margin: "30%",
                             }}
                             onClick={(e) => removeOrder(item)}
                           >
                             <FontAwesomeIcon icon={faTrash}></FontAwesomeIcon>
+                          </button>
+                          <button
+                            style={{
+                              border: "1.5px solid #BCEAD5",
+                              // margin: "0 30%",
+                            }}
+                            onClick={(e) => removeOrder(item)}
+                          >
+                            <ShoppingCartCheckoutIcon fontSize="small" />
                           </button>
                         </td>
                       </tr>
@@ -206,53 +220,6 @@ function Cart() {
                   )}
                 </tbody>
               </table>
-            </div>
-            <div className="d-flex justify-content-between py-3">
-              <div className="infor-ship col-md-3">
-                <h3>Shipment Details</h3>
-                <p>
-                  Fullname: <span>{customerName}</span>
-                </p>
-                <p>
-                  Phone number: <span>{phone}</span>
-                </p>
-              </div>
-              <div className="total col-md-4">
-                <h3>Total</h3>
-                <div className="container" style={{ padding: "8px 0" }}>
-                  <div className="row total-qty col-sm-12">
-                    <p
-                      className="col-sm-4"
-                      style={{ textAlign: "right", margin: "auto 0" }}
-                    >
-                      Total quantum
-                    </p>
-                    <input type="text" className="col-sm-8 input-total" />
-                  </div>
-                  <div className="row total-price col-sm-12">
-                    <p
-                      className="col-sm-4"
-                      style={{ textAlign: "right", margin: "auto 0" }}
-                    >
-                      Total price
-                    </p>
-                    <input type="text" className="col-sm-8 input-total" />
-                  </div>
-                  <div className="row total-buy col-sm-12">
-                    <p
-                      className="col-sm-4"
-                      style={{ textAlign: "right", margin: "auto 0" }}
-                    >
-                      Total price
-                    </p>
-                    <select className="col-sm-8 input-total text-center">
-                      <option>Money</option>
-                      <option>Banking</option>
-                    </select>
-                  </div>
-                  <div className="btn-submit col-md-12">Comfirm</div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
