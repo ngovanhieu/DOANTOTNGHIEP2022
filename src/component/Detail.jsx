@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-
 import Slider from "react-slick";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Spinner } from "./spinner";
-import { setDisplayAlert, setItemPropAlert } from "../redux";
+import { setDataPayment, setDisplayAlert, setItemPropAlert } from "../redux";
 import { useDispatch } from "react-redux";
 
 export const Detail = () => {
@@ -107,6 +106,24 @@ export const Detail = () => {
     } else {
       setQuantity(quantity - 1);
     }
+  };
+
+  const payment = () => {
+    const dataPayment = {
+      userId: userId,
+      customerName: cusstomerName,
+      phone: phone,
+      image: data.images,
+      price: data.price,
+      Brand: data.productName,
+      Color: data.price,
+      quantity: quantity,
+      Total: data.price * quantity,
+      productName :data?.productName,
+      productBrand: data?.productBrand
+    };
+    dispatch(setDataPayment(dataPayment))
+    navigate(`/payment`);
   };
 
   return (
@@ -215,7 +232,12 @@ export const Detail = () => {
                     </div>
                     <div className="row pb-3">
                       <div className="col d-grid">
-                        <button className="btn btn-success btn-lg">Buy</button>
+                        <div
+                          className="btn btn-success btn-lg"
+                          onClick={payment}
+                        >
+                          Buy
+                        </div>
                       </div>
                       <div className="col d-grid">
                         <div

@@ -56,6 +56,13 @@ li.text-muted.text-right {
     /* background-color: #ccc ; */
     margin: 0 auto;
 }
+.other{
+    align-items: center;
+    display: flex;
+    width: 80%;
+    margin: 40px auto;
+    justify-content: space-between;
+}
 .btn-other{
     border: #000 solid 1.5px;
     background-color: #d9ffed;
