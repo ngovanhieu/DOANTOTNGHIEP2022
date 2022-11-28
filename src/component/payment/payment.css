@@ -2,6 +2,8 @@
   width: 100%;
   display: grid;
   place-items: center;
+  max-width: 1450px;
+  margin: auto;
 }
 .container_Cart_Payment_information {
   width: 50%;

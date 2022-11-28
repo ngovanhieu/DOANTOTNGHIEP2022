@@ -12,9 +12,9 @@ import DoneIcon from "@mui/icons-material/Done";
 export const Quanlity = ({ item, setCheckUpdate, checkUpdate }) => {
   const [check, setCheck] = useState(false);
   const [quantity, setQuantity] = useState(1);
-  let customerName = localStorage.getItem("customerName");
-  let phone = localStorage.getItem("phone");
   const dispatch = useDispatch();
+
+
   const handleQuantity = (check) => {
     if (check === "plus") {
       setQuantity(quantity + 1);
@@ -28,6 +28,7 @@ export const Quanlity = ({ item, setCheckUpdate, checkUpdate }) => {
   useEffect(() => {
     fetchData();
   }, []);
+  
   const fetchData = async () => {
     axios
       .get(`http://localhost:5000/api/getOrderById/${item._id}`)

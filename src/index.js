@@ -13,6 +13,7 @@ import Cart from "./component/shop/Cart";
 import Payment from "./component/payment/payment";
 import Blog from "./component/blog/Blog";
 import BlogDetail from "./component/blog/BlogDetail";
+import History from "./component/history/history";
 import { Detail } from "./component/Detail";
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
@@ -37,6 +38,7 @@ root.render(
           <Route path="/cart" element={<Cart />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/payment" element={<Payment />} />
+          <Route path="/history" element={<History />} />
           <Route path="/detail/:id" element={<Detail />} />
           <Route path="/blogdetail" element={<BlogDetail />}></Route>
         </Routes>

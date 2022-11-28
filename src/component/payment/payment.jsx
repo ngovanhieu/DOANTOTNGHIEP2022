@@ -2,8 +2,13 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useDispatch, useSelector } from "react-redux";
-import { dataPaymentSelector, setDisplayAlert, setItemPropAlert } from "../../redux";
+import {
+  dataPaymentSelector,
+  setDisplayAlert,
+  setItemPropAlert,
+} from "../../redux";
 import "./payment.css";
+import axios from "axios";
 
 const Payment = () => {
   const data = useSelector(dataPaymentSelector);
@@ -21,6 +26,47 @@ const Payment = () => {
       dispatch(setDisplayAlert(true));
       dispatch(setItemPropAlert("Yêu cầu nhập đủ thông tin!"));
     }
+  };
+
+  const handlePayment = () => {
+    const datas = {
+      productId: data?.values?.productId,
+        productName:data?.values?.productName,
+        quantity: data?.values?.quantity,
+        price: data?.values?.price,
+        type: "fhsdbasf",
+        images: data?.values?.image,
+        userId:  data?.values?.userId,
+        userName: name,
+        phone: phone,
+        address:  address,
+        orderStatus: 2,
+    }
+    console.log(datas);
+    axios
+      .post(`http://localhost:5000/api/orders/createOrders`, {
+        productId: data?.values?.productId,
+        productName:data?.values?.productName,
+        quantity: data?.values?.quantity,
+        price: data?.values?.price,
+        type: "aaaaaa",
+        images: data?.values?.image,
+        userId:  data?.values?.userId,
+        userName: name,
+        phone: phone,
+        address:  address,
+        orderStatus: 2,
+      })
+      .then(function (response) {
+        dispatch(setDisplayAlert(true));
+        dispatch(setItemPropAlert(response?.data.message));
+        console.log(response);
+      })
+      .catch(function (error) {
+        dispatch(setDisplayAlert(true));
+        dispatch(setItemPropAlert(error?.data.message));
+        console.log(error);
+      });
   };
   return (
     <div>
@@ -51,7 +97,7 @@ const Payment = () => {
                 onChange={(e) => setPhone(e.target.value)}
               >
                 <Form.Label>Số điện thoại</Form.Label>
-                <Form.Control type="email" placeholder="0787314023" />
+                <Form.Control type="email" />
               </Form.Group>
 
               <Button
@@ -129,7 +175,7 @@ const Payment = () => {
                   <Button
                     className="payment_button_order"
                     variant="primary"
-                    type="submit"
+                    onClick={handlePayment}
                   >
                     Đặt Hàng
                   </Button>
