@@ -1,0 +1,33 @@
+.nameCart{
+    color: red;
+    font-family: fantasy !important;
+    text-align: center;
+    margin: 20px auto;
+    position: relative;
+    z-index: 3;
+}
+.name_payment{
+    color: red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
+    margin: auto;
+}
+.backgroup{
+    position: absolute;
+    height: 200px;
+    width: 100%;
+}
+.card-image{
+    background-image: url("https://live.staticflickr.com/491/31818797506_41e52a8b36.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    border-radius: 100%;
+    border: 5px solid bisque;
+}
+.author{
+    z-index: 4;
+    text-align: center;
+}

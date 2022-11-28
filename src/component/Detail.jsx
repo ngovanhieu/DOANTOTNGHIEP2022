@@ -111,16 +111,15 @@ export const Detail = () => {
   const payment = () => {
     const dataPayment = {
       userId: userId,
+      productId: data._id,
       customerName: cusstomerName,
       phone: phone,
       image: data.images,
       price: data.price,
-      Brand: data.productName,
       Color: data.price,
       quantity: quantity,
       Total: data.price * quantity,
       productName :data?.productName,
-      productBrand: data?.productBrand
     };
     dispatch(setDataPayment(dataPayment))
     navigate(`/payment`);
@@ -163,7 +162,7 @@ export const Detail = () => {
                   </ul>
                   <h6>Description:</h6>
                   <p>{data?.type}</p>
-                  <ul className="list-inline">
+                  {/* <ul className="list-inline">
                     <li className="list-inline-item">
                       <h6>Avaliable Color :</h6>
                     </li>
@@ -172,7 +171,7 @@ export const Detail = () => {
                         <strong>White / Black / Blues</strong>
                       </p>
                     </li>
-                  </ul>
+                  </ul> */}
 
                   <h6>Cấu hình :</h6>
                   <ul className="list-unstyled pb-3">
@@ -230,7 +229,7 @@ export const Detail = () => {
                         </ul>
                       </div>
                     </div>
-                    <div className="row pb-3">
+                    <div className="row pb-3 my-2">
                       <div className="col d-grid">
                         <div
                           className="btn btn-success btn-lg"

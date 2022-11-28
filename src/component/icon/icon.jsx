@@ -3,11 +3,11 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./icon.css";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import HistoryIcon from "@mui/icons-material/History";
-
+import History from "../history/history";
 const Icon = () => {
     const navigation = useNavigate();
   const user = JSON.parse(localStorage.getItem("dataUser"));
+
 
   return (
     <div>
@@ -24,10 +24,10 @@ const Icon = () => {
         <div
           className="container_icon_cart"
           onClick={() => {
-            //   navigation("/history");
+              // navigation("/history");
           }}
         >
-          <HistoryIcon fontSize="large" />
+          {/* <HistoryIcon fontSize="large" /> */}
         </div>
       </div>
     </div>

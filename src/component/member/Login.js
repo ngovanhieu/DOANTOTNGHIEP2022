@@ -57,6 +57,7 @@ function Login() {
           localStorage.setItem("userId", response.data.userId);
           localStorage.setItem("customerName", response.data.userName);
           localStorage.setItem("phone", response.data.phone);
+          localStorage.setItem("email", response.data.email);
           setItemErr("");
         })
         .catch(function (error) {

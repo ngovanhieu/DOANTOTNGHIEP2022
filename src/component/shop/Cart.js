@@ -5,9 +5,10 @@ import axios from "axios";
 import { useEffect } from "react";
 import { useState, useRef } from "react";
 import { useDispatch } from "react-redux";
-import { setDisplayAlert, setItemPropAlert } from "../../redux";
+import { setDataPayment, setDisplayAlert, setItemPropAlert } from "../../redux";
 import { Quanlity } from "./quanlity";
 import ShoppingCartCheckoutIcon from "@mui/icons-material/ShoppingCartCheckout";
+import { useNavigate } from "react-router-dom";
 
 function Cart() {
   const [message, setMessage] = useState("");
@@ -16,8 +17,11 @@ function Cart() {
   const [data, setData] = useState([]);
   const [checkRemove, setCheckRemove] = useState(false);
   const [quantity, setQuantity] = useState(1);
-  let customerName = localStorage.getItem("customerName");
-  let phone = localStorage.getItem("phone");
+  const userId = localStorage.getItem("userId");
+  const customerName = localStorage.getItem("customerName");
+  const phone = localStorage.getItem("phone");
+  const navigate = useNavigate();
+
   // const ref = useRef([])
   const dispatch = useDispatch();
   useEffect(() => {
@@ -66,6 +70,24 @@ function Cart() {
         dispatch(setDisplayAlert(true));
         dispatch(setItemPropAlert("Xóa thất bại"));
       });
+  };
+
+  const payment = (item) => {
+    console.log(item);
+    const dataPayment = {
+      userId: userId,
+      productId: item._id,
+      customerName: customerName,
+      phone: phone,
+      image: item.image,
+      price: item.price,
+      Color: item.price,
+      quantity: item.Amount,
+      Total: item.price * item.Amount,
+      productName: item?.Brand,
+    };
+    dispatch(setDataPayment(dataPayment));
+    navigate(`/payment`);
   };
   return (
     <>
@@ -144,7 +166,7 @@ function Cart() {
                           style={{ color: "#379237", fontWeight: "600" }}
                         >
                           <p style={{ textAlign: "center", margin: "auto 0" }}>
-                           {index + 1}
+                            {index + 1}
                           </p>
                         </td>
                         <td className="col-md-1">
@@ -204,7 +226,7 @@ function Cart() {
                               border: "1.5px solid #BCEAD5",
                               // margin: "0 30%",
                             }}
-                            onClick={(e) => removeOrder(item)}
+                            onClick={(e) => payment(item)}
                           >
                             <ShoppingCartCheckoutIcon fontSize="small" />
                           </button>

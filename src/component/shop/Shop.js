@@ -104,13 +104,7 @@ export const Shop = () => {
       findBrand(dataSearch);
     }
   };
-  // useEffect(() => {
-  //   axios.get("http://localhost:3000/Shop")
-  //     .then((res) => {
-  //       console.log(res)
-  //     })
-  //     .catch(error => console.log(error))
-  // }, [])
+
 
   return (
     <>
@@ -193,17 +187,17 @@ export const Shop = () => {
                       <div className="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                         <ul className="list-unstyled">
                           <li>
-                            <a className="btn btn-success text-white">
+                            <div className="btn btn-success text-white" >
                               <i className="far fa-heart"></i>
-                            </a>
+                            </div>
                           </li>
                           <li>
-                            <a
+                            <div
                               className="btn btn-success text-white mt-2"
                               onClick={(e) => moveToDetail(item)}
                             >
                               <i className="far fa-eye"></i>
-                            </a>
+                            </div>
                           </li>
                           <li>
                             <div
